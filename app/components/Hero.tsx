@@ -1,6 +1,11 @@
 import Image from "next/image";
+import { MouseEventHandler } from "react";
 
-export default function Hero() {
+interface HeroProps {
+  onJoinUsClick: MouseEventHandler<HTMLButtonElement>;
+}
+
+const Hero: React.FC<HeroProps> = ({ onJoinUsClick }) => {
   return (
     <section className="flex flex-nowrap wrapper items-center justify-center gap-24 min-h-[75vh]">
       {/* not sure if min-h-[75vh] is the most optimal */}
@@ -8,7 +13,9 @@ export default function Hero() {
         <h1 className="text-7xl font-bold">TechTank</h1>
         <h2 className="text-2xl">Your Techie Community</h2>
         <div className="flex gap-4 mt-10">
-          <button className="btn bg-white font-normal">Join Us</button>
+          <button onClick={onJoinUsClick} className="btn bg-white font-normal">
+            Join Us
+          </button>
           <button className="btn">Contact Us</button>
         </div>
       </div>
@@ -25,4 +32,6 @@ export default function Hero() {
       />
     </section>
   );
-}
+};
+
+export default Hero;
