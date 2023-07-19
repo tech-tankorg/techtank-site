@@ -1,11 +1,11 @@
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <h1>TechTank</h1>
-      <h2>Your Techie Community</h2>
+      <Hero />
     </main>
   );
 }
