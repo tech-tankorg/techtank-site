@@ -5,8 +5,7 @@ import React from "react";
 const JoinUs = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
     <section ref={ref}>
-      <h2>Join Us!</h2>
-      <h3>hey drey!</h3>
+      <h2>Join Us! :D</h2>
       <div>
         <ul>
           <li>
