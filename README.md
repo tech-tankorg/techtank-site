@@ -13,3 +13,9 @@ To start the local server on the port specified in the `.env`:
 ```bash
 npm run dev
 ```
+
+For dev, please run the Tailwind server:
+
+```bash
+npx tailwindcss -i ./styles/input.css -o ./dist/output.css --watch
+```
