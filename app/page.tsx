@@ -1,10 +1,10 @@
 "use client";
 
 import { useRef, MouseEventHandler } from "react";
-
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import JoinUs from "./components/JoinUs";
+// import Contact from "./components/Contact"
 
 interface HomeProps {
   onJoinUsClick?: MouseEventHandler<HTMLButtonElement>;
@@ -23,6 +23,7 @@ const Home: React.FC<HomeProps> = () => {
       <Header />
       <Hero onJoinUsClick={scrollToJoinUs} />
       <JoinUs ref={joinUsRef} />
+      {/* <Contact /> */}
     </main>
   );
 };

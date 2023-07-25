@@ -1,61 +1,69 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Slack from "../../public/slack.png"
+import Meetup from "../../public/Meetup_Logo.png"
+import Github from "../../public/GitHub_Invertocat_Logo.svg"
 
 const JoinUs = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
+  const imageRef = React.useRef<HTMLAnchorElement>(null); // Use useRef to create the ref
   return (
-    <section ref={ref}>
-      <h2>Join Us! :D</h2>
-      <div>
-        <ul>
-          <li>
-            <Link href="/">
-              <Image
-                src="/slack-icon.png"
-                alt="slack icon"
-                width={200}
-                height={200}
-              />
-              <h3>Slack</h3>
+    <div className="joinUs-size">
+    {/* <section ref={ref}> */}
+      <div className="flex flex-col justify-center p-10 w-[50%]">
+        <h1 className="text-4xl">Join Us!</h1>
+      </div>
+
+      <div className="flex flex-row space-x-3">
+        <div className="container">
+        <div className="cardFormat"> 
+          <div className="center--card">
+            <Link target="_blank" href="https://join.slack.com/t/thetechtank/shared_invite/zt-1y9l2ste9-ICirf8fhVqJtW_pHfwA_yQ">
+            <a ref={imageRef} className="img--joinUs">
+                 <Image src={Slack} alt="slack icon" width={200} height={200} />
+            </a>
+              <h3 className="text-3xl">Slack!</h3>
               <p>
                 Join us on our Slack channel where you can learn more about
                 networking and social events, and learn/grow together!
               </p>
             </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <Image
-                src="/meetup-icon.png"
-                alt="meetup icon"
-                width={200}
-                height={200}
-              />
+            </div>
+          </div>
+
+          <div className="cardFormat">
+            <div className="center--card">
+            <Link target="_blank" href="https://www.meetup.com">
+            <a ref={imageRef} className="img--joinUs">
+                 <Image src={Meetup} alt="slack icon" width={200} height={200} />
+            </a>
               <h3>Meetup</h3>
               <p>
                 Join us on Meetup for in-person events and networking sessions
                 based in Toronto!
               </p>
             </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <Image
-                src="/github-icon.png"
-                alt="Github icon"
-                width={200}
-                height={200}
-              />
+            </div>
+          </div>
+
+          <div className="cardFormat">
+            <div className="center--card">
+            <Link target="_blank" href="https://github.com/tech-tankorg">
+            <a ref={imageRef} className="img--joinUs">
+                 <Image src={Github} alt="slack icon" width={200} height={200} />
+            </a>
               <h3>Github</h3>
               <p>
                 Join our Github organization to contribute towards our
                 open-source community and build together!
               </p>
             </Link>
-          </li>
-        </ul>
+          </div>
+          </div>
       </div>
-    </section>
+      </div>
+    {/* </section> */}
+    </div>
   );
 });
 

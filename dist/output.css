@@ -659,3 +659,34 @@ body {
   width: 90%;
   max-width: 1440px;
 }
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* left: 100px; */
+  margin-top: 40px;
+}
+.cardFormat {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  height: 400px;
+  width: 23%;
+  border-radius: 5% 75px;
+  margin-left: 50px;
+}
+
+.center--card {
+  text-align:center;
+  justify-content: space-between;
+}
+
+.img--joinUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
