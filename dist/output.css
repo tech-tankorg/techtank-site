@@ -660,6 +660,11 @@ body {
   max-width: 1440px;
 }
 
+.joinUs-size {
+  height: 600px;
+  width: 90%;
+  max-width: 1440px;
+}
 
 .container {
   display: flex;
