@@ -8,7 +8,7 @@ After you've forked and cloned the repo on to your local machine, go to the proj
 cd techtank-site && npm install
 ```
 
-To start the local server on the port specified in the `.env`:
+To start the local server:
 
 ```bash
 npm run dev

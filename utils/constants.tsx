@@ -6,6 +6,7 @@ interface Enforcement {
 
 interface Unacceptable {
   id: string;
+  title: string;
   text: string;
 }
 
@@ -31,12 +32,12 @@ export const CoC_Contents: PageConstants = {
   SCOPE_TEXT:
     "We, the admin team at TechTank, are happy to have grown to such a large group in such a short amount of time. As we value the participation and enjoyment of everyone in our community, we have decided to release community guidelines/codes of conduct. Our goal and wish is that everyone has a positive experience, and these codes apply to ALL community spaces: our slack workspace, in-person and virtual social gatherings, and direct messages. Repeated unacceptable behaviour will lead to expulsion from the group as we are here to create a safe and inclusive space for everyone.",
   ENFORCEMENT_TEXT:
-    "Instances of abuse, harassment or any unacceptable behavior can be reported to Chris, Erik, Nonso, and Sammy. We will take corrective action in response to any behavior deemed inappropriate, threatening, offensive or harmful. We have a right to protect this space and individuals within.",
+    "Instances of abuse, harassment or any unacceptable behavior can be reported to the workspace admins (Chris K., Sammy, Nonso, Niya, Riaz, Neal or Erik O.). We will take corrective action in response to any behavior deemed inappropriate, threatening, offensive or harmful. We have a right to protect this space and individuals within.",
   ENFORCEMENT_LIST: [
     {
       id: 1,
       title: "Notice of Correction",
-      text: "We will contact said individual to correct their behavior via slack.",
+      text: "You will be notified via Slack regarding your unacceptable behavior and a request to correct your behavior.",
     },
     {
       id: 2,
@@ -52,39 +53,48 @@ export const CoC_Contents: PageConstants = {
   UNACCEPTABLE_BEHAVIOR: [
     {
       id: "A",
-      text: "No hate speech or discriminatory language: Do not engage in or tolerate any form of hate speech, including but not limited to racist, sexist, homophobic, transphobic, or ableist language.",
+      title: "No hate speech or discriminatory language",
+      text: "Do not engage in or tolerate any form of hate speech, including but not limited to racist, sexist, homophobic, transphobic, or ableist language.",
     },
     {
       id: "B",
-      text: "No discrimination: Treat all individuals with fairness, respect, and dignity, regardless of their race, gender, sexual orientation, religion, nationality, disability, or any other characteristic..",
+      title: "No discrimination",
+      text: "Treat all individuals with fairness, respect, and dignity, regardless of their race, gender, sexual orientation, religion, nationality, disability, or any other characteristic.",
     },
     {
       id: "C",
-      text: "No harassment: Do not engage in any form of harassment, including verbal, written, physical, or visual harassment. This includes but is not limited to offensive jokes, derogatory comments, unwelcome advances, or persistent unwelcome communication. This includes asking for referrals from people you have not had contact with prior.",
+      title: "No harassment",
+      text: "Do not engage in any form of harassment, including verbal, written, physical, or visual harassment. This includes but is not limited to offensive jokes, derogatory comments, unwelcome advances, or persistent unwelcome communication. This includes asking for referrals from people you have not had contact with prior.",
     },
     {
       id: "D",
-      text: "No bullying or intimidation: Do not engage in any behavior intended to intimidate, belittle, or demean others within the group.",
+      title: "No bullying or intimidation",
+      text: "Do not engage in any behavior intended to intimidate, belittle, or demean others within the group.",
     },
     {
       id: "E",
-      text: "*No feigning surprise: Don't act surprised or belittle others when they express not knowing something, whether it's a technical or non-technical topic.",
+      title: "*No feigning surprise",
+      text: "Don't act surprised or belittle others when they express not knowing something, whether it's a technical or non-technical topic.",
     },
     {
       id: "F",
-      text: "*No well-actually's: Avoid making minor corrections solely for the purpose of grandstanding, particularly if they don't significantly contribute to the conversation.",
+      title: "*No well-actually's",
+      text: "Avoid making minor corrections solely for the purpose of grandstanding, particularly if they don't significantly contribute to the conversation.",
     },
     {
       id: "G",
-      text: "*No back-seat driving (in irl, face-to-face contexts): Refrain from intermittently offering unsolicited advice or interrupting ongoing conversations, as it can be disruptive and disrespectful. Instead, fully engage and participate when helping or joining discussions.",
+      title: "*No back-seat driving (in irl, face-to-face contexts)",
+      text: "Refrain from intermittently offering unsolicited advice or interrupting ongoing conversations, as it can be disruptive and disrespectful. Instead, fully engage and participate when helping or joining discussions.",
     },
     {
       id: "H",
-      text: "Respect other people’s boundaries. No means no.",
+      title: "Respect other people’s boundaries",
+      text: "No means no.",
     },
     {
       id: "I",
-      text: "Respect other people’s time. Many folx in the group, including the admins, have personal and professional lives outside of the group. Expect delays in responses especially on weekends and weeknights, and understand it might take time to respond to your query. (N.B.: If you have a general question that you think might benefit others in the group, always consider posting in an appropriate channel before sending a DM to an admin.)",
+      title: "Respect other people’s time",
+      text: "Many folx in the group, including the admins, have personal and professional lives outside of the group. Expect delays in responses especially on weekends and weeknights, and understand it might take time to respond to your query. (N.B.: If you have a general question that you think might benefit others in the group, always consider posting in an appropriate channel before sending a DM to an admin.)",
     },
   ],
   EXAMPLES_UNACCEPTABLES: [
