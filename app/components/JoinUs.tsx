@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const JoinUs = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
+const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
   return (
     <section ref={ref}>
       <h2>Join Us!</h2>

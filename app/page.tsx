@@ -11,7 +11,6 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = () => {
-  // const joinUsRef = useRef(null);
   const joinUsRef = useRef<HTMLElement>(null);
 
   const scrollToJoinUs = () => {
