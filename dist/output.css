@@ -554,6 +554,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .m-3 {
   margin: 0.75rem;
 }
@@ -622,6 +656,10 @@ video {
   list-style-type: disc;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-nowrap {
   flex-wrap: nowrap;
 }
@@ -676,6 +714,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-5xl {
@@ -741,20 +784,21 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
-  /* left: 100px; */
-  margin-top: 40px;
+  margin: 40px 0 0 50px;
 }
-.cardFormat {
-  display: flex;
+
+.card--format {
   flex-wrap: wrap;
   background-color: white;
   height: 400px;
+  border-radius: 5% 75px;
+  margin-left: 50px;
   width: 20%;
   border-radius: 1% 75px;
-  /* margin-left: 50px; */
 }
 
 .center--card {
+  justify-content: space-between;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -766,7 +810,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* margin-top: 7px; */
 }
 
 .img--joinUs2 {
@@ -774,7 +817,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -30px;
+  margin-top: 17px;
 }
 
 h3 {
@@ -788,7 +831,6 @@ h3 {
   text-align: center;
   margin-top: 20px;
 }
-
 
 .hover\:underline:hover {
   text-decoration-line: underline;

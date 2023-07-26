@@ -11,13 +11,13 @@ const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
   return (
     <div className="joinUs-size">
     {/* <section ref={ref}> */}
-      <div className="flex flex-col justify-center p-10 w-[50%]">
+      <div className="text-center">
         <h1 className="text-4xl">Join Us!</h1>
       </div>
 
-      <div className="flex flex-row space-x-3">
+      <div className="flex flex-col">
         <div className="container">
-          <div className="cardFormat"> 
+          <div className="card--format"> 
             <div className="center--card">
               <Link target="_blank" href="https://join.slack.com/t/thetechtank/shared_invite/zt-1y9l2ste9-ICirf8fhVqJtW_pHfwA_yQ" className="img--joinUs">
                  <Image src={Slack} alt="slack icon" width={200} height={200} className="img--joinUs" />
@@ -30,7 +30,7 @@ const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-          <div className="cardFormat">
+          <div className="card--format">
             <div className="center--card">
               <Link target="_blank" href="https://www.meetup.com" className="img--joinUs2">
                  <Image src={Meetup} alt="slack icon" width={200} height={200}/>
@@ -43,9 +43,9 @@ const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
             </div>
           </div>
 
-          <div className="cardFormat">
+          <div className="card--format">
             <div className="center--card">
-              <Link target="_blank" href="https://github.com/tech-tankorg" className="img--joinUs">
+              <Link target="_blank" href="https://github.com/tech-tankorg" className="img--joinUs2">
                  <Image src={Github} alt="slack icon" width={200} height={200}/>
                 <h3 className="text-2xl">Github</h3>
                 <p className="adjust--style">
