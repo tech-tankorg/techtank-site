@@ -1,32 +1,4 @@
-interface Enforcement {
-  id: number;
-  title: string;
-  text: string;
-}
-
-interface Unacceptable {
-  id: string;
-  title: string;
-  text: string;
-}
-
-interface Referrals {
-  id: number;
-  title: string;
-  text: string;
-}
-
-interface PageConstants {
-  SCOPE_TEXT: string;
-  ENFORCEMENT_TEXT: string;
-  ENFORCEMENT_LIST: Enforcement[];
-  UNACCEPTABLE_BEHAVIOR: Unacceptable[];
-  EXAMPLES_UNACCEPTABLES: Array<string>;
-  EXAMPLES_ACCEPTABLES: Array<string>;
-  REFERRAL_POLICY_TEXT: string;
-  REFERRAL_POLICIES: Referrals[];
-  REFERRAL_POLICY_CONCL: string;
-}
+import { PageConstants } from "../types/PageTypes";
 
 export const CoC_Contents: PageConstants = {
   SCOPE_TEXT:

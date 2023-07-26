@@ -1,5 +1,6 @@
-import { CoC_Contents } from "@/utils/constants";
+import { CoC_Contents } from "@/src/constants/CoC_Constants";
 import Header from "../components/Header";
+import Link from "next/link";
 
 export default function CoC() {
   return (
@@ -19,16 +20,14 @@ export default function CoC() {
           <h4 className="text-3xl uppercase font-light pb-2">Enforcement</h4>
           <p className="pb-2">{CoC_Contents.ENFORCEMENT_TEXT}</p>
           <ul>
-            {CoC_Contents.ENFORCEMENT_LIST.map((list) => {
-              return (
-                <li key={list.id} className="my-2 ml-10">
-                  <span className="font-bold">
-                    {list.id}. {list.title}:
-                  </span>{" "}
-                  {list.text}
-                </li>
-              );
-            })}
+            {CoC_Contents.ENFORCEMENT_LIST.map((list) => (
+              <li key={list.id} className="my-2 ml-10">
+                <span className="font-bold">
+                  {list.id}. {list.title}:
+                </span>{" "}
+                {list.text}
+              </li>
+            ))}
           </ul>
         </div>
         {/* UNACCEPTABLE BEHAVIOR */}
@@ -37,18 +36,22 @@ export default function CoC() {
             Unacceptable Behavior
           </h4>
           <ul>
-            {CoC_Contents.UNACCEPTABLE_BEHAVIOR.map((list) => {
-              return (
-                <li key={list.id} className="my-2 ml-10">
-                  <span className="font-bold">
-                    {list.id}. {list.title}:
-                  </span>{" "}
-                  {list.text}
-                </li>
-              );
-            })}
+            {CoC_Contents.UNACCEPTABLE_BEHAVIOR.map((list) => (
+              <li key={list.id} className="my-2 ml-10">
+                <span className="font-bold">
+                  {list.id}. {list.title}:
+                </span>{" "}
+                {list.text}
+              </li>
+            ))}
             <p className="text-xs italic ml-10">
-              *Taken from Toronto Javascript
+              <Link
+                href="https://torontojs.com/p/code_of_conduct"
+                target="_blank"
+                className="hover:underline"
+              >
+                *Taken from Toronto Javascript
+              </Link>
             </p>
           </ul>
         </div>
@@ -59,13 +62,11 @@ export default function CoC() {
             Examples of Unaccepted Behaviors:
           </h4>
           <ul>
-            {CoC_Contents.EXAMPLES_UNACCEPTABLES.map((item) => {
-              return (
-                <li key={item} className="list-disc ml-10 my-1.5">
-                  {item}
-                </li>
-              );
-            })}
+            {CoC_Contents.EXAMPLES_UNACCEPTABLES.map((item) => (
+              <li key={item} className="list-disc ml-10 my-1.5">
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
         {/* ACCEPTABLE BEHAVIOR */}
@@ -74,13 +75,11 @@ export default function CoC() {
             Examples of Acceptable Behaviors
           </h4>
           <ul>
-            {CoC_Contents.EXAMPLES_ACCEPTABLES.map((item) => {
-              return (
-                <li key={item} className="list-disc ml-10 my-1.5">
-                  {item}
-                </li>
-              );
-            })}
+            {CoC_Contents.EXAMPLES_ACCEPTABLES.map((item) => (
+              <li key={item} className="list-disc ml-10 my-1.5">
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
         {/* REFERRAL POLICY */}
@@ -90,16 +89,14 @@ export default function CoC() {
           </h4>
           <p>{CoC_Contents.REFERRAL_POLICY_TEXT}</p>
           <ul>
-            {CoC_Contents.REFERRAL_POLICIES.map((list) => {
-              return (
-                <li key={list.id} className="my-2 ml-10">
-                  <span className="font-bold">
-                    {list.id}. {list.title}:
-                  </span>{" "}
-                  {list.text}
-                </li>
-              );
-            })}
+            {CoC_Contents.REFERRAL_POLICIES.map((list) => (
+              <li key={list.id} className="my-2 ml-10">
+                <span className="font-bold">
+                  {list.id}. {list.title}:
+                </span>{" "}
+                {list.text}
+              </li>
+            ))}
           </ul>
           <p>{CoC_Contents.REFERRAL_POLICY_CONCL}</p>
         </div>
