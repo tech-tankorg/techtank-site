@@ -7,8 +7,7 @@ import Slack from "../../public/slack.png"
 import Meetup from "../../public/Meetup_Logo.png"
 import Github from "../../public/GitHub_Invertocat_Logo.svg"
 
-const JoinUs = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
-  // const imageRef = React.useRef<HTMLAnchorElement>(null); // Use useRef to create the ref
+const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
   return (
     <div className="joinUs-size">
     {/* <section ref={ref}> */}

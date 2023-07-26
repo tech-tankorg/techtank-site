@@ -1,7 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+  const isCoC = pathname === "/code-of-conduct";
+  const linkPath = isCoC ? "/" : "/code-of-conduct";
+  const linkText = isCoC ? "Back" : "Code of Conduct";
+
   return (
     <section className="flex justify-between items-center wrapper py-5">
       <div>
@@ -17,9 +25,9 @@ export default function Header() {
         </Link>
       </div>
       <div>
-        <Link href="/code-of-conduct">
+        <Link href={linkPath}>
           <div className="btn">
-            <p>Code of Conduct</p>
+            <p>{linkText}</p>
           </div>
         </Link>
       </div>
