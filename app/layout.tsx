@@ -1,8 +1,13 @@
-import "./globals.css";
+import "../dist/output.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  weight: ["200", "400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "TechTank TO",
@@ -16,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      {/* Q: is it bad to supress hydration warnings explictly like this? */}
+      <body className={poppins.className} suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   );
 }

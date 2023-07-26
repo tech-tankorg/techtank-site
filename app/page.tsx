@@ -1,11 +1,29 @@
-import Header from "./components/Header";
+"use client";
 
-export default function Home() {
+import { useRef, MouseEventHandler } from "react";
+
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import JoinUs from "./components/JoinUs";
+
+interface HomeProps {
+  onJoinUsClick?: MouseEventHandler<HTMLButtonElement>;
+}
+
+const Home: React.FC<HomeProps> = () => {
+  const joinUsRef = useRef<HTMLElement>(null);
+
+  const scrollToJoinUs = () => {
+    joinUsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <main className="min-h-screen bg-gradient bg-cover">
+    <main className="min-h-screen">
       <Header />
-      <h1>TechTank</h1>
-      <h2>Your Techie Community</h2>
+      <Hero onJoinUsClick={scrollToJoinUs} />
+      <JoinUs ref={joinUsRef} />
     </main>
   );
-}
+};
+
+export default Home;
