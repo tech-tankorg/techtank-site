@@ -21,7 +21,7 @@ body {
   }
 }
 
-.card--format {
+.cardFormat {
   flex-wrap: wrap;
   background-color: white;
   height: 400px;
