@@ -590,16 +590,12 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-\[17px\] {
-  margin-top: 17px;
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-\[18px\] {
   margin-top: 18px;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
 }
 
 .flex {
