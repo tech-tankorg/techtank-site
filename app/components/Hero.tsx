@@ -3,11 +3,12 @@ import { MouseEventHandler } from "react";
 
 interface HeroProps {
   onJoinUsClick: MouseEventHandler<HTMLButtonElement>;
+  onContactUsClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-const Hero: React.FC<HeroProps> = ({ onJoinUsClick }) => {
+const Hero: React.FC<HeroProps> = ({ onJoinUsClick, onContactUsClick }) => {
   return (
-    <section className="flex flex-nowrap wrapper items-center justify-center gap-24 min-h-[75vh]">
+    <section className="flex flex-nowrap wrapper items-center justify-center gap-24 min-h-[90vh]">
       {/* not sure if min-h-[75vh] is the most optimal */}
       <div>
         <h1 className="text-7xl font-bold">TechTank</h1>
@@ -16,7 +17,9 @@ const Hero: React.FC<HeroProps> = ({ onJoinUsClick }) => {
           <button onClick={onJoinUsClick} className="btn bg-white font-normal">
             Join Us
           </button>
-          <button className="btn">Contact Us</button>
+          <button className="btn" onClick={onContactUsClick}>
+            Contact Us
+          </button>
         </div>
       </div>
 

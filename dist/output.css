@@ -1,7 +1,6 @@
-/* To run tailwind: npx tailwindcss -i ./styles/inp
-ut.css -o ./dist/output.css --watch */
-
-/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
+/*
+! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -578,6 +577,11 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .ml-10 {
   margin-left: 2.5rem;
 }
@@ -614,6 +618,11 @@ video {
   height: auto;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .min-h-\[200px\] {
   min-height: 200px;
 }
@@ -624,6 +633,23 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-fit {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+
+.min-h-\[80vh\] {
+  min-height: 80vh;
+}
+
+.min-h-\[100vh\] {
+  min-height: 100vh;
+}
+
+.min-h-\[90vh\] {
+  min-height: 90vh;
 }
 
 .w-\[80\%\] {
@@ -698,6 +724,26 @@ video {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
 .text-center {
@@ -777,7 +823,7 @@ body {
   max-width: 1440px;
 }
 
-.cardFormat {
+.joinUsCard {
   flex-wrap: wrap;
   background-color: white;
   height: 400px;
@@ -795,4 +841,3 @@ h3 {
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
-

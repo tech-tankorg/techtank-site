@@ -4,25 +4,40 @@ import { useRef, MouseEventHandler } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import JoinUs from "./components/JoinUs";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
 
 interface HomeProps {
   onJoinUsClick?: MouseEventHandler<HTMLButtonElement>;
+  onContactUsClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const Home: React.FC<HomeProps> = () => {
   const joinUsRef = useRef<HTMLDivElement>(null);
+  const contactUsRef = useRef<HTMLDivElement>(null);
 
   const scrollToJoinUs = () => {
-    joinUsRef.current?.scrollIntoView({ behavior: "smooth" });
+    // NB: scrollIntoView apparently ignores all margins and scrolls to the most immediately available element with content
+    const element = joinUsRef.current;
+    if (element) {
+      const topPosition =
+        element.getBoundingClientRect().top + window.scrollY - 65;
+      window.scrollTo({ top: topPosition, behavior: "smooth" });
+    }
+  };
+
+  const scrollToContactUs = () => {
+    contactUsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <main className="min-h-screen">
       <Header />
-      <Hero onJoinUsClick={scrollToJoinUs} />
-      <JoinUs ref={joinUsRef} />
-      {/* <Contact /> */}
+      <Hero
+        onJoinUsClick={scrollToJoinUs}
+        onContactUsClick={scrollToContactUs}
+      />
+      <JoinUs ref={joinUsRef} onContactUsClick={scrollToContactUs} />
+      <Contact ref={contactUsRef} />
     </main>
   );
 };
