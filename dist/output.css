@@ -586,12 +586,28 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-\[18px\] {
+  margin-top: 18px;
+}
+
 .flex {
   display: flex;
 }
 
 .table {
   display: table;
+}
+
+.h-\[600px\] {
+  height: 600px;
 }
 
 .h-auto {
@@ -610,6 +626,10 @@ video {
   min-height: 100vh;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .w-auto {
   width: auto;
 }
@@ -618,8 +638,20 @@ video {
   min-width: 200px;
 }
 
+.max-w-\[1440px\] {
+  max-width: 1440px;
+}
+
 .list-disc {
   list-style-type: disc;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .flex-nowrap {
@@ -644,6 +676,10 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-\[100px\] {
+  gap: 100px;
 }
 
 .bg-white {
@@ -678,6 +714,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -686,6 +727,11 @@ video {
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
@@ -731,6 +777,22 @@ body {
   max-width: 1440px;
 }
 
+.cardFormat {
+  flex-wrap: wrap;
+  background-color: white;
+  height: 400px;
+  border-radius: 5% 75px;
+  margin-left: 50px;
+  width: 20%;
+  border-radius: 1% 75px;
+}
+
+h3 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
+
