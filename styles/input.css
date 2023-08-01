@@ -20,3 +20,20 @@ body {
     @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px];
   }
 }
+
+.cardFormat {
+  flex-wrap: wrap;
+  background-color: white;
+  height: 400px;
+  width: 23%;
+  border-radius: 5% 75px;
+  margin-left: 50px;
+  width: 20%;
+  border-radius: 1% 75px;
+}
+
+h3 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
