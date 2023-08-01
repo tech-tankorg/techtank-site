@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import Slack from "../../public/slack.png";
 import Meetup from "../../public/Meetup_Logo.png";
 import Github from "../../public/GitHub_Invertocat_Logo.svg";
 
-const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
+const JoinUs = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
-    <div className="h-[600px] max-w-[1440px]">
+    <div className="h-[600px] max-w-[1440px]" ref={ref}>
       <div className="text-center">
         <h1 className="text-4xl">Join Us!</h1>
       </div>
@@ -21,8 +21,7 @@ const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
               <Link
                 target="_blank"
                 href="https://join.slack.com/t/thetechtank/shared_invite/zt-1y9l2ste9-ICirf8fhVqJtW_pHfwA_yQ"
-                className="flex flex-col items-center justify-center"
-              >
+                className="flex flex-col items-center justify-center">
                 <Image src={Slack} alt="slack icon" width={200} height={200} />
                 <h3 className="text-2xl">Slack</h3>
                 <p className="w-[80%] text-center mt-5 text-sm">
@@ -38,8 +37,7 @@ const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
               <Link
                 target="_blank"
                 href="https://www.meetup.com"
-                className="flex flex-col items-center justify-center mt-[18px]"
-              >
+                className="flex flex-col items-center justify-center mt-[18px]">
                 <Image src={Meetup} alt="slack icon" width={200} height={200} />
                 <h3 className="text-2xl">Meetup</h3>
                 <p className="w-[80%] text-center mt-6 text-sm">
@@ -55,8 +53,7 @@ const JoinUs = React.forwardRef<HTMLElement, {}>((props, ref) => {
               <Link
                 target="_blank"
                 href="https://github.com/tech-tankorg"
-                className="flex flex-col items-center justify-center mt-[18px]"
-              >
+                className="flex flex-col items-center justify-center mt-[18px]">
                 <Image src={Github} alt="slack icon" width={200} height={200} />
                 <h3 className="text-2xl">Github</h3>
                 <p className="w-[80%] text-center mt-5 text-sm">
