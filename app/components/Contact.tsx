@@ -3,27 +3,32 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-export const ContactUs = () => {
-  const form = useRef();
+// https://www.emailjs.com/
 
-  const sendEmail = (e) => {
+export const Contact = () => {
+  const form = useRef<HTMLFormElement | null>(null); // Add type annotation for "form" useRef.
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    // Add type annotation for "e" event parameter.
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        form.current,
-        "YOUR_PUBLIC_KEY"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "YOUR_SERVICE_ID",
+          "YOUR_TEMPLATE_ID",
+          form.current,
+          "YOUR_PUBLIC_KEY"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   return (
@@ -38,7 +43,6 @@ export const ContactUs = () => {
     </form>
   );
 };
-// https://www.emailjs.com/
 
-// Contact.displayName = "Contact";
-// export default Contact;
+Contact.displayName = "Contact";
+export default Contact;
