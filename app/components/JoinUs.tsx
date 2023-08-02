@@ -14,7 +14,7 @@ interface JoinUsProps {
 const JoinUs = React.forwardRef<HTMLDivElement, JoinUsProps>(
   ({ onContactUsClick }, ref) => {
     return (
-      <div className="min-h-[90vh] max-w-[1440px] mx-auto my-6 " ref={ref}>
+      <div className="min-h-[90vh] max-w-[1440px] mx-auto my-6" ref={ref}>
         <h2 className="text-4xl text-center">Join Us!</h2>
 
         <div className="flex flex-col">

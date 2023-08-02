@@ -15,8 +15,10 @@ module.exports = {
     colors: {
       white: "#FFFFFF",
       lessWhite: "#F0F9FF",
+      black: "#000",
+      darkTurquoise: "#35938c",
     },
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 };
