@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: currentColor;
+  border-color: #e5e7eb;
   /* 2 */
 }
 
@@ -611,16 +611,8 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-\[18px\] {
-  margin-top: 18px;
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .block {
@@ -663,10 +655,6 @@ video {
   width: 600px;
 }
 
-.w-\[80\%\] {
-  width: 80%;
-}
-
 .w-auto {
   width: auto;
 }
@@ -689,10 +677,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .flex-nowrap {
@@ -719,16 +703,17 @@ video {
   gap: 1rem;
 }
 
-.gap-\[100px\] {
-  gap: 100px;
-}
-
 .rounded-md {
   border-radius: 0.375rem;
 }
 
 .border {
   border-width: 1px;
+}
+
+.border-gray-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .bg-white {
@@ -751,6 +736,10 @@ video {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 
 .text-center {
@@ -821,6 +810,11 @@ video {
   font-style: italic;
 }
 
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -835,20 +829,93 @@ body {
 }
 
 .joinUsCard {
-  flex-wrap: wrap;
-  background-color: white;
+  display: flex;
   height: 400px;
-  border-radius: 5% 75px;
-  margin-left: 50px;
   width: 20%;
+  min-width: 250px;
   border-radius: 1% 75px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-h3 {
-  font-weight: bold;
-  margin-top: 20px;
+@media (max-width: 890px) {
+  .joinUsCard {
+    height: 325px;
+    min-width: 200px;
+  }
+}
+
+.joinUsLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.joinUsImg {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 890px) {
+  .joinUsImg {
+    height: auto;
+    width: 150px;
+    padding-bottom: 0.75rem;
+  }
+}
+
+.joinUsCard h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 890px) {
+  .joinUsCard h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.joinUsCard p {
+  margin-top: 1.25rem;
+  width: 80%;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (max-width: 890px) {
+  .joinUsCard p {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .codeOfConduct p,
+.codeOfConduct li {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .codeOfConduct h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .codeOfConduct h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+@media (max-width: 1280px) {
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
 }
