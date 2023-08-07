@@ -1,4 +1,4 @@
-import { CoC_Contents } from "@/src/constants/CoC_Constants";
+import { CoC_Contents } from "@/utils/constants/CoC_Constants";
 import Header from "../components/Header";
 import Link from "next/link";
 

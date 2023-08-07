@@ -1,5 +1,3 @@
-/* To run tailwind: npx tailwindcss -i ./styles/inp
-ut.css -o ./dist/output.css --watch */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,9 +17,15 @@ body {
   .btn {
     @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px];
   }
+  .btn:hover:not(:disabled) {
+    @apply bg-darkTurquoise text-white font-normal;
+  }
+  .btn:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
 }
 
-.cardFormat {
+.joinUsCard {
   flex-wrap: wrap;
   background-color: white;
   height: 400px;
@@ -36,4 +40,3 @@ h3 {
   font-weight: bold;
   margin-top: 20px;
 }
-

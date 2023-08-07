@@ -10,13 +10,15 @@ module.exports = {
   ],
   theme: {
     backgroundImage: {
-      gradient: 'url("../public/gradient.png") ',
+      gradient: 'url("../public/gradient-vertical.png") ',
     },
     colors: {
       white: "#FFFFFF",
       lessWhite: "#F0F9FF",
+      black: "#000",
+      darkTurquoise: "#35938c",
     },
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 };
