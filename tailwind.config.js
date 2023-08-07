@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     backgroundImage: {
-      gradient: 'url("../public/gradient.png") ',
+      gradient: 'url("../public/gradient-vertical.png") ',
     },
     colors: {
       white: "#FFFFFF",

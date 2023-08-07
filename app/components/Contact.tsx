@@ -1,10 +1,9 @@
 "use client";
 
 import React, { forwardRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "../../utils/service/emailService";
 
 const Contact = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
-  const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY;
   const [emailSent, setEmailSent] = useState<boolean>(false);
   const [emailErrored, setEmailErrored] = useState<boolean>(false);
   const [userName, setUserName] = useState<string>("");
@@ -16,29 +15,24 @@ const Contact = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
     setUserName(e.target.value);
   };
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    setSubmittedUserName(userName);
-    emailjs
-      .sendForm("default_service", "template_qg2k3ds", form, PUBLIC_KEY)
-      .then(
-        (result) => {
-          setEmailSent(true);
-          form.reset();
-          setUserName("");
-        },
-        (error) => {
-          setEmailErrored(true);
-          console.log(error.text);
-        }
-      );
+  const sendFormEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    sendEmail(
+      e,
+      userName,
+      setEmailSent,
+      setEmailErrored,
+      setUserName,
+      setSubmittedUserName
+    );
   };
 
   return (
     <div ref={ref} className="min-h-[90vh] max-w-[1440px] mx-auto my-6 wrapper">
       <h2 className="text-4xl text-center">Contact Us!</h2>
-      <form onSubmit={sendEmail} className="flex flex-col w-[600px] mx-auto">
+      <form
+        onSubmit={sendFormEmail}
+        className="flex flex-col w-[600px] mx-auto"
+      >
         <label
           htmlFor="user_name"
           className="block text-sm font-medium text-gray-700"

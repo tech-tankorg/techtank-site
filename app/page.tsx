@@ -1,17 +1,12 @@
 "use client";
 
-import { useRef, MouseEventHandler } from "react";
+import { useRef } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import JoinUs from "./components/JoinUs";
 import Contact from "./components/Contact";
 
-interface HomeProps {
-  onJoinUsClick?: MouseEventHandler<HTMLButtonElement>;
-  onContactUsClick?: MouseEventHandler<HTMLButtonElement>;
-}
-
-const Home: React.FC<HomeProps> = () => {
+const Home = () => {
   const joinUsRef = useRef<HTMLDivElement>(null);
   const contactUsRef = useRef<HTMLDivElement>(null);
 

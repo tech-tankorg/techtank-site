@@ -683,10 +683,6 @@ video {
   max-width: 1440px;
 }
 
-.cursor-not-allowed {
-  cursor: not-allowed;
-}
-
 .list-disc {
   list-style-type: disc;
 }
@@ -825,14 +821,10 @@ video {
   font-style: italic;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("../public/gradient.png") ;
+  background-image: url("../public/gradient-vertical.png") ;
   background-size: cover;
 }
 
