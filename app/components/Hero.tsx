@@ -19,9 +19,8 @@ const Hero: React.FC<HeroProps> = ({ onJoinUsClick, onContactUsClick }) => {
           src="/Group 8.svg"
           width={150}
           height={150}
-          sizes="100vw"
           alt="tech tech fish logo"
-          className="w-auto h-auto min-w-[150px] min-h-[150px]"
+          className="w-auto h-auto min-w-[150px] min-h-[150px] sm:px-4"
           priority
         />
         <div className="flex gap-4 mt-10 justify-center">

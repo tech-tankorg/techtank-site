@@ -15,7 +15,7 @@ body {
 
 @layer base {
   .btn {
-    @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px];
+    @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px] sm:min-w-[100px] sm:text-sm;
   }
   .btn:hover:not(:disabled) {
     @apply bg-darkTurquoise text-white font-normal;
@@ -26,7 +26,7 @@ body {
 }
 
 .joinUsCard {
-  @apply flex bg-white h-[400px] w-[20%] min-w-[250px] rounded-custom md:min-w-[200px] md:h-[325px];
+  @apply flex bg-white h-[400px] w-[20%] min-w-[250px] rounded-custom md:min-w-[200px] md:h-[325px] hover:shadow-lg transition-all duration-300 ease-in-out;
 }
 
 .joinUsLink {

@@ -18,7 +18,7 @@ const JoinUs = React.forwardRef<HTMLDivElement, JoinUsProps>(
         <h2 className="text-4xl text-center">Join Us!</h2>
 
         <div className="flex flex-col items-center">
-          <div className="flex justify-center gap-24 mt-10 lg:gap-16">
+          <div className="flex justify-center gap-24 mt-10 lg:gap-16 md:gap-12 sm:gap-8 sm:flex-col sm:items-center">
             <div className="joinUsCard">
               <Link
                 target="_blank"
@@ -43,8 +43,7 @@ const JoinUs = React.forwardRef<HTMLDivElement, JoinUsProps>(
             <div className="joinUsCard">
               <Link
                 target="_blank"
-                // TODO: link needs to be revised
-                href="https://www.meetup.com"
+                href="https://www.meetup.com/techtank-to/"
                 className="joinUsLink"
               >
                 <Image
@@ -83,7 +82,7 @@ const JoinUs = React.forwardRef<HTMLDivElement, JoinUsProps>(
               </Link>
             </div>
           </div>
-          <button className="btn mt-16" onClick={onContactUsClick}>
+          <button className="btn mt-16 sm:mt-8" onClick={onContactUsClick}>
             Contact Us
           </button>
         </div>

@@ -9,15 +9,16 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xl: { max: "1280px" },
+      lg: { max: "1024px" },
+      md: { max: "890px" },
+      sm: { max: "760px" },
+      xs: { max: "414px" },
+    },
     extend: {
       backgroundImage: {
         gradient: 'url("../public/gradient-vertical.png") ',
-      },
-      screens: {
-        lg: { max: "1280px" },
-        md: { max: "890px" },
-        sm: { max: "760px" },
-        xs: { max: "414px" },
       },
       colors: {
         white: "#FFFFFF",
@@ -26,9 +27,9 @@ module.exports = {
         darkTurquoise: "#35938c",
       },
       borderRadius: {
-          'custom': '1% 75px',
-        },
-    }
+        custom: "1% 75px",
+      },
+    },
   },
   plugins: [],
 };
