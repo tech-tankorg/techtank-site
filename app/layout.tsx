@@ -1,9 +1,9 @@
 import "../dist/output.css";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Rubik } from "next/font/google";
 
-const poppins = Poppins({
-  weight: ["200", "400", "700"],
+const rubik = Rubik({
+  weight: ["300", "400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
@@ -21,8 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* Q: is it bad to supress hydration warnings explictly like this? */}
-      <body className={poppins.className} suppressHydrationWarning={true}>
+      <body className={rubik.className} suppressHydrationWarning={true}>
         {children}
       </body>
     </html>
