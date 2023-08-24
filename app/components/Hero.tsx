@@ -9,11 +9,21 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ onJoinUsClick, onContactUsClick }) => {
   return (
     <section className="flex flex-nowrap wrapper items-center justify-center gap-24 min-h-[90vh]">
-      {/* not sure if min-h-[75vh] is the most optimal */}
       <div>
-        <h1 className="text-7xl font-bold">TechTank</h1>
-        <h2 className="text-2xl">Your Techie Community</h2>
-        <div className="flex gap-4 mt-10">
+        {/* H1 is visually hidden but still accessible to screen
+          readers. */}
+        <h1 className="absolute w-1 h-1 overflow-hidden clip [group-hover:clip-auto] m-[-0.25rem] p-0 border-0 whitespace-nowrap">
+          TechTank
+        </h1>
+        <Image
+          src="/full_logo.svg"
+          width={150}
+          height={150}
+          alt="tech tech fish logo"
+          className="w-auto h-auto min-w-[150px] min-h-[150px] sm:px-4"
+          priority
+        />
+        <div className="flex gap-4 mt-10 justify-center">
           <button onClick={onJoinUsClick} className="btn bg-white font-normal">
             Join Us
           </button>
@@ -22,17 +32,6 @@ const Hero: React.FC<HeroProps> = ({ onJoinUsClick, onContactUsClick }) => {
           </button>
         </div>
       </div>
-
-      {/* Come back to image configs */}
-      <Image
-        src="/tech_tank_fish_white.png"
-        width={200}
-        height={200}
-        sizes="100vw"
-        alt="tech tech fish logo"
-        className="w-auto h-auto min-w-[200px] min-h-[200px]"
-        priority
-      />
     </section>
   );
 };

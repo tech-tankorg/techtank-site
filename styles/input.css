@@ -15,7 +15,7 @@ body {
 
 @layer base {
   .btn {
-    @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px];
+    @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px] sm:min-w-[100px] sm:text-sm;
   }
   .btn:hover:not(:disabled) {
     @apply bg-darkTurquoise text-white font-normal;
@@ -26,17 +26,34 @@ body {
 }
 
 .joinUsCard {
-  flex-wrap: wrap;
-  background-color: white;
-  height: 400px;
-  width: 23%;
-  border-radius: 5% 75px;
-  margin-left: 50px;
-  width: 20%;
-  border-radius: 1% 75px;
+  @apply flex bg-white h-[400px] w-[20%] min-w-[250px] rounded-custom md:min-w-[200px] md:h-[325px] hover:shadow-lg transition-all duration-300 ease-in-out;
 }
 
-h3 {
-  font-weight: bold;
-  margin-top: 20px;
+.joinUsLink {
+  @apply flex flex-col items-center justify-center;
+}
+
+.joinUsImg {
+  @apply pb-6 md:w-[150px] md:h-auto md:pb-3;
+}
+
+.joinUsCard h3 {
+  @apply font-bold text-2xl md:text-xl;
+}
+
+.joinUsCard p {
+  @apply w-[80%] text-center mt-5 text-sm md:text-xs md:my-3;
+}
+
+.codeOfConduct p,
+.codeOfConduct li {
+  @apply md:text-sm;
+}
+
+.codeOfConduct h2 {
+  @apply md:text-4xl;
+}
+
+.codeOfConduct h4 {
+  @apply md:text-2xl;
 }

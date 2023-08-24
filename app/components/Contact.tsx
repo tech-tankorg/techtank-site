@@ -27,11 +27,14 @@ const Contact = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
   };
 
   return (
-    <div ref={ref} className="min-h-[90vh] max-w-[1440px] mx-auto my-6 wrapper">
-      <h2 className="text-4xl text-center">Contact Us!</h2>
+    <div
+      ref={ref}
+      className="min-h-[90vh] max-w-[1440px] mx-auto my-6 wrapper sm:pt-32"
+    >
+      <h2 className="text-4xl text-center pb-6">Contact Us!</h2>
       <form
         onSubmit={sendFormEmail}
-        className="flex flex-col w-[600px] mx-auto"
+        className="flex flex-col w-[600px] mx-auto sm:w-[90%]"
       >
         <label
           htmlFor="user_name"
