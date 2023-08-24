@@ -15,6 +15,7 @@ module.exports = {
       md: { max: "890px" },
       sm: { max: "760px" },
       xs: { max: "414px" },
+      xs: { max: "375px" },
     },
     extend: {
       backgroundImage: {

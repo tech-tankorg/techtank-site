@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinUsClick, onContactUsClick }) => {
           TechTank
         </h1>
         <Image
-          src="/Group 8.svg"
+          src="/full_logo.svg"
           width={150}
           height={150}
           alt="tech tech fish logo"

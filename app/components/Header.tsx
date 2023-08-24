@@ -15,11 +15,18 @@ export default function Header() {
       <div>
         <Link href="/" className="flex items-center gap-4">
           <Image
-            src="/Group 8@2x.png"
+            src="/full_logo_2x.png"
             width={80}
             height={80}
-            alt="tech tech logo"
-            className="w-auto h-auto"
+            alt="tech tank full logo"
+            className="w-auto h-auto xs:hidden"
+          />
+          <Image
+            src="/fish_logo.svg"
+            width={80}
+            height={80}
+            alt="tech tank fish logo"
+            className="w-auto h-auto hidden xs:block"
           />
         </Link>
       </div>
