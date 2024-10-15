@@ -116,7 +116,7 @@ const Home = () => {
           ></path>
         </svg>
       </div>
-      <section className="py-24">
+      <section className="py-12">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold mb-8 text-center">
             Our Past Sponsors
@@ -135,6 +135,51 @@ const Home = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+      <div className="w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          className="w-full h-auto"
+        >
+          <path
+            fill="#ffffff"
+            fillOpacity="1"
+            d="M0,128L48,138.7C96,149,192,171,288,165.3C384,160,480,128,576,128C672,128,768,160,864,165.3C960,171,1056,149,1152,133.3C1248,117,1344,107,1392,101.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+      <section className="bg-white py-4 ">
+        <div className="wrapper container mx-auto px-4 pb-16">
+          <div className="flex flex-row gap-16 relative">
+            <div className="flex flex-col flex-2 text-left items-left gap-8">
+              <h2 className="text-4xl font-bold mb-4">Host an Event</h2>
+              <p className="text-2xl leading-relaxed">
+                Our monthly Tech meetups are made possible by the generous
+                support of our sponsors. If you or your company are interested
+                in becoming a sponsor, we invite you to get in touch with us.
+              </p>
+              <div>
+                <button className="btn">Learn More</button>
+              </div>
+            </div>
+            <Image
+              src="/event-1.jpg"
+              alt="Tech event"
+              width={1875}
+              height={2500}
+              className="flex-1 rounded-full aspect-square object-cover w-[700px] h-[700px]"
+            />
+            <Image
+              src="/event-2.jpg"
+              alt="Tech event"
+              width={2500}
+              height={1666}
+              style={{ marginTop: "-70px", marginRight: "-50px" }}
+              className="flex-1 rounded-full aspect-square object-cover absolute top-0 right-0 w-[300px] h-[300px]"
+            />
           </div>
         </div>
       </section>
