@@ -8,7 +8,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="wrapper py-5 flex flex-row items-center justify-between">
+    <header className="py-5 flex flex-row items-center justify-between">
       <div className="flex justify-between items-center mb-4">
         <div>
           <Link href="/" className="flex items-center gap-4">

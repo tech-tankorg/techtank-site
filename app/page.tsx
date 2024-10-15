@@ -1,38 +1,38 @@
 "use client";
 
-import { useRef } from "react";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import JoinUs from "./components/JoinUs";
-import Contact from "./components/Contact";
+import Image from "next/image";
 
 const Home = () => {
-  const joinUsRef = useRef<HTMLDivElement>(null);
-  const contactUsRef = useRef<HTMLDivElement>(null);
-
-  const scrollToJoinUs = () => {
-    // NB: scrollIntoView apparently ignores all margins and scrolls to the most immediately available element with content
-    const element = joinUsRef.current;
-    if (element) {
-      const topPosition =
-        element.getBoundingClientRect().top + window.scrollY - 65;
-      window.scrollTo({ top: topPosition, behavior: "smooth" });
-    }
-  };
-
-  const scrollToContactUs = () => {
-    contactUsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <main className="min-h-screen">
+    <main className="wrapper min-h-screen">
       <Header />
-      <Hero
-        onJoinUsClick={scrollToJoinUs}
-        onContactUsClick={scrollToContactUs}
-      />
-      <JoinUs ref={joinUsRef} onContactUsClick={scrollToContactUs} />
-      <Contact ref={contactUsRef} />
+      <div className="container mx-auto px-4 py-48">
+        <div className="flex flex-row md:flex-row gap-8 items-center">
+          <div className="flex-1 flex flex-col gap-6">
+            <div>
+              <h1 className="text-5xl font-bold">Welcome to the Tank!</h1>
+              <p className="text-3xl">Hope you have a good swim.</p>
+            </div>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA"
+            >
+              <div className="btn">Join us →</div>
+            </a>
+          </div>
+          <div className="flex-1 flex justify-center">
+            <Image
+              src="/full_logo_big.png"
+              alt="Tank image"
+              width={541}
+              height={230}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
     </main>
   );
 };
