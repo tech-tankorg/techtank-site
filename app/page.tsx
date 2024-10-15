@@ -3,7 +3,24 @@
 import Header from "./components/Header";
 import Image from "next/image";
 
+const sponsorSrcs = [
+  "/brainstation.png",
+  "/cohere.png",
+  "/microsoft.svg",
+  "/intuit.svg",
+  "/points.png",
+  "/rakuten-kobo.svg",
+  "/7shifts.png",
+];
+
 const Home = () => {
+  let shuffledSponsorSrcs = shuffleArray(sponsorSrcs);
+  const loopedSponsorSrcs = [
+    ...shuffledSponsorSrcs,
+    ...shuffledSponsorSrcs,
+    ...shuffledSponsorSrcs,
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-100 via-blue-100 to-white">
       <main className="wrapper">
@@ -49,7 +66,7 @@ const Home = () => {
         </svg>
       </div>
       <section className="bg-white">
-        <div className="wrapper container mx-auto px-4 py-24">
+        <div className="wrapper container mx-auto px-4 py-8">
           <div className="grid sm:grid-cols-1 grid-cols-4 gap-12">
             <SocialMediaColumn
               imageSrc="/slack-cropped.png"
@@ -83,6 +100,41 @@ const Home = () => {
               buttonText="Join Instagram"
               buttonLink="https://www.instagram.com/techtankto/"
             />
+          </div>
+        </div>
+      </section>
+      <div className="w-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          className="w-full h-auto"
+        >
+          <path
+            fill="#ffffff"
+            fillOpacity="1"
+            d="M0,0L1440,0L1440,0L0,0Z M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,181.3C672,171,768,181,864,192C960,203,1056,213,1152,208C1248,203,1344,181,1392,170.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+          ></path>
+        </svg>
+      </div>
+      <section className="py-24">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold mb-8 text-center">
+            Our Past Sponsors
+          </h2>
+          <div className="relative overflow-hidden">
+            <div className="flex items-center animate-scroll">
+              {loopedSponsorSrcs.map((src, index) => (
+                <div key={index} className="flex-shrink-0 w-1/4 px-4">
+                  <Image
+                    src={src}
+                    alt={src}
+                    width={200}
+                    height={150}
+                    className="mx-auto"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -131,3 +183,11 @@ const SocialMediaColumn: React.FC<SocialMediaColumnProps> = ({
     </div>
   );
 };
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}

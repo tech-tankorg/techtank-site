@@ -30,6 +30,15 @@ module.exports = {
       borderRadius: {
         custom: "1% 75px",
       },
+      animation: {
+        scroll: "scroll 60s linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-200%)" },
+        },
+      },
     },
   },
   plugins: [],
