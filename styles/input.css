@@ -15,7 +15,7 @@ body {
 
 @layer base {
   .btn {
-    @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px] sm:min-w-[100px] sm:text-sm;
+    @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px] cursor-pointer sm:min-w-[100px] sm:text-sm;
   }
   .btn:hover:not(:disabled) {
     @apply bg-darkTurquoise text-white font-normal;

@@ -438,6 +438,7 @@ video {
   width: -moz-fit-content;
   width: fit-content;
   min-width: 150px;
+  cursor: pointer;
   border-radius: 1.5rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -611,6 +612,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -699,8 +704,16 @@ video {
   list-style-type: disc;
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .flex-nowrap {
@@ -725,6 +738,10 @@ video {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .overflow-hidden {
