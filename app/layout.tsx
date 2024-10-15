@@ -22,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={rubik.className} suppressHydrationWarning={true}>
-        {children}
+        <div className="bg-gradient-to-b from-sky-100 via-blue-100 to-white">
+          {children}
+        </div>
       </body>
     </html>
   );
