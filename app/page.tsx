@@ -48,11 +48,42 @@ const Home = () => {
           ></path>
         </svg>
       </div>
-      <section className="bg-white ">
-        {/* Add your new white section content here */}
+      <section className="bg-white">
         <div className="wrapper container mx-auto px-4 py-24">
-          <h2 className="text-3xl font-bold">Next Section</h2>
-          <p>This is where your next section content will go.</p>
+          <div className="grid sm:grid-cols-1 grid-cols-4 gap-12">
+            <SocialMediaColumn
+              imageSrc="/slack-cropped.png"
+              altText="Slack logo"
+              title="Slack"
+              description="Join us on our Slack channel where you can learn more about networking and social events!"
+              buttonText="Join Slack"
+              buttonLink="https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA"
+            />
+            <SocialMediaColumn
+              imageSrc="/Meetup_Logo.png"
+              altText="Meetup logo"
+              title="Meetup"
+              description="Join us on Meetup for in-person events and networking sessions based in Toronto!"
+              buttonText="Join Meetup"
+              buttonLink="https://www.meetup.com/techtank-to/"
+            />
+            <SocialMediaColumn
+              imageSrc="/linkedin.jpg"
+              altText="LinkedIn logo"
+              title="LinkedIn"
+              description="Stay connected with us on LinkedIn for the latest updates on networking and social events."
+              buttonText="Join LinkedIn"
+              buttonLink="https://www.linkedin.com/company/techtank-to/"
+            />
+            <SocialMediaColumn
+              imageSrc="/ig.png"
+              altText="Instagram logo"
+              title="Instagram"
+              description="Follow us on Instagram to see some of our latest social and networking events!"
+              buttonText="Join Instagram"
+              buttonLink="https://www.instagram.com/techtankto/"
+            />
+          </div>
         </div>
       </section>
     </div>
@@ -60,3 +91,43 @@ const Home = () => {
 };
 
 export default Home;
+
+interface SocialMediaColumnProps {
+  imageSrc: string;
+  altText: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+}
+
+const SocialMediaColumn: React.FC<SocialMediaColumnProps> = ({
+  imageSrc,
+  altText,
+  title,
+  description,
+  buttonText,
+  buttonLink,
+}) => {
+  return (
+    <div className="flex flex-col items-center text-center">
+      <Image
+        src={imageSrc}
+        alt={altText}
+        width={100}
+        height={100}
+        className="mb-4"
+      />
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="mb-4 flex-grow">{description}</p>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href={buttonLink}
+        className="btn mt-auto"
+      >
+        {buttonText}
+      </a>
+    </div>
+  );
+};
