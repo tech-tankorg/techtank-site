@@ -31,19 +31,19 @@ export default function Header() {
       </div>
       <div className="flex justify-between items-center flex-row gap-8">
         <nav className="flex flex-wrap gap-4">
-          <Link href="/about" className="text-sm hover:underline">
+          <Link href="/" className="text-sm hover:underline">
             About
           </Link>
-          <Link href="/activities" className="text-sm hover:underline">
+          <Link href="/" className="text-sm hover:underline">
             Activities
           </Link>
-          <Link href="/mentors" className="text-sm hover:underline">
+          <Link href="/" className="text-sm hover:underline">
             Mentors
           </Link>
-          <Link href="/events" className="text-sm hover:underline">
+          <Link href="/" className="text-sm hover:underline">
             Events
           </Link>
-          <Link href="/donate" className="text-sm hover:underline">
+          <Link href="/" className="text-sm hover:underline">
             Donate
           </Link>
           <Link href="/code-of-conduct" className="text-sm hover:underline">
