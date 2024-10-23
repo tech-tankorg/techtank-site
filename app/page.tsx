@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import JoinUs from "./components/JoinUs";
 import Contact from "./components/Contact";
+import Footer from "@/app/components/Footer";
 
 const Home = () => {
   const joinUsRef = useRef<HTMLDivElement>(null);
@@ -33,6 +34,7 @@ const Home = () => {
       />
       <JoinUs ref={joinUsRef} onContactUsClick={scrollToContactUs} />
       <Contact ref={contactUsRef} />
+      <Footer />
     </main>
   );
 };

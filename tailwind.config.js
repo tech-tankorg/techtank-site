@@ -15,7 +15,7 @@ module.exports = {
       md: { max: "890px" },
       sm: { max: "760px" },
       xs: { max: "414px" },
-      xs: { max: "375px" },
+      xxs: { max: "375px" },
     },
     extend: {
       backgroundImage: {
@@ -26,6 +26,7 @@ module.exports = {
         lessWhite: "#F0F9FF",
         black: "#000",
         darkTurquoise: "#35938c",
+        lightTurquoise: "#6FE3E0"
       },
       borderRadius: {
         custom: "1% 75px",
