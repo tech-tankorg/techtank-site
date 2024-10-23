@@ -9,7 +9,7 @@ export default function Footer() {
       </h2>
       <div className="mx-auto max-w-[1440px] w-[90%] px-6 flex sm:flex-col flex-row gap-4">
         <div className="flex-1 flex flex-col justify-between sm:items-center">
-          <p className="text-3xl text-white">
+          <p className="text-3xl text-lessWhite">
             Want to support us?
           </p>
           <Link href={"/"} className="sm:my-8">
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
           <div className="flex mt-12 md:gap-4 gap-1 md:col-start-1 md:col-span-3 md:justify-center justify-start col-start-3">
             {navigation.social.map((item) => (
-              <Link key={item.name} href={item.href} className="text-lessWhite hover:text-gray-400">
+              <Link key={item.name} href={item.href} className="text-lessWhite hover:text-lightTurquoise">
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="md:h-12 md:w-12 h-6 w-6"/>
               </Link>

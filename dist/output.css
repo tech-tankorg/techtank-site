@@ -1062,6 +1062,11 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.hover\:text-lightTurquoise:hover {
+  --tw-text-opacity: 1;
+  color: rgb(111 227 224 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
