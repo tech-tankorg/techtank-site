@@ -8,8 +8,8 @@ const AboutUs = () => {
     <>
       <Header />
       <section className='aboutUs m-auto md:w-[90%] w-full pb-6'>
-        <div className='grid md:grid-cols-1 grid-cols-2'>
-          <div className='ml-10 mr-20 leading-relaxed'>
+        <div className='md:flex md:flex-col grid grid-cols-2 grid-rows-1'>
+          <div className='md:m-auto ml-10 mr-36 leading-8 font-light text-lg'>
             <h2 className='text-4xl my-6'>About Us</h2>
             <p className='mb-4'>
               TechTank is a lively and inclusive tech community where we
@@ -39,8 +39,8 @@ const AboutUs = () => {
               </div>
             </Link>
           </div>
-          <div className='bg-red-500 relative'>
-            <Image src='/about.jpeg' alt='About Us' style={{ objectFit: "cover" }} fill/>
+          <div className='bg-red-500 relative md:aspect-video aspect-auto md:order-first'>
+            <Image src='/about.jpeg' alt='About Us' style={{ objectFit: "cover", objectPosition: "center" }} fill/>
           </div>
         </div>
       </section>
