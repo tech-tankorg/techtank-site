@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xl: 80rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-md: 55.625rem;
+  --breakpoint-sm: 47.5rem;
+  --breakpoint-xs: 25.875rem;
+  --breakpoint-xxs: 23.4375rem;
+  --color-white: #ffffff;
+  --color-less-white: #f0f9ff;
+  --color-black: #000;
+  --color-dark-turquoise: #35938c;
+  --color-light-turquoise: #6fe3e0;
+  --radius-custom: 1% 75px;
+}
+
+:root {
+  --background-image-gradient: url("../../public/gradient-vertical.png");
+}
