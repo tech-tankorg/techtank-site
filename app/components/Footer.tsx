@@ -1,5 +1,5 @@
 import Link from "next/link";
-import navigation from '../../utils/constants/navigation'
+import navigation from "../../utils/constants/navigation";
 
 export default function Footer() {
   return (
@@ -9,9 +9,7 @@ export default function Footer() {
       </h2>
       <div className="mx-auto max-w-[1440px] w-[90%] px-6 flex sm:flex-col flex-row gap-4">
         <div className="flex-1 flex flex-col justify-between sm:items-center">
-          <p className="text-3xl text-lessWhite">
-            Want to support us?
-          </p>
+          <p className="text-3xl text-less-white">Want to support us?</p>
           <Link href={"/"} className="sm:my-8">
             <div className="btn">
               <p>Make A Donation</p>
@@ -24,7 +22,10 @@ export default function Footer() {
             <ul role="list" className="mt-6 space-y-4">
               {navigation.events.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-sm leading-6 text-lightTurquoise underline hover:text-white">
+                  <Link
+                    href={item.href}
+                    className="text-sm leading-6 text-light-turquoise underline hover:text-white"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -36,7 +37,10 @@ export default function Footer() {
             <ul role="list" className="mt-6 space-y-4">
               {navigation.initiatives.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-sm leading-6 text-lightTurquoise underline hover:text-white">
+                  <Link
+                    href={item.href}
+                    className="text-sm leading-6 text-light-turquoise underline hover:text-white"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -48,7 +52,10 @@ export default function Footer() {
             <ul role="list" className="mt-6 space-y-4">
               {navigation.legal.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-sm leading-6 text-lightTurquoise underline hover:text-white">
+                  <Link
+                    href={item.href}
+                    className="text-sm leading-6 text-light-turquoise underline hover:text-white"
+                  >
                     {item.name}
                   </Link>
                 </li>
@@ -57,14 +64,21 @@ export default function Footer() {
           </div>
           <div className="flex mt-12 md:gap-4 gap-1 md:col-start-1 md:col-span-3 md:justify-center justify-start col-start-3">
             {navigation.social.map((item) => (
-              <Link key={item.name} href={item.href} className="text-lessWhite hover:text-lightTurquoise">
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-less-white hover:text-light-turquoise"
+              >
                 <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="md:h-12 md:w-12 h-6 w-6"/>
+                <item.icon
+                  aria-hidden="true"
+                  className="md:h-12 md:w-12 h-6 w-6"
+                />
               </Link>
             ))}
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

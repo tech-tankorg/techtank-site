@@ -1,11 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./theme.css";
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: theme("backgroundImage[gradient]");
+  background-image: var(--background-image-gradient);
   @apply bg-cover;
 }
 
@@ -15,10 +13,10 @@ body {
 
 @layer base {
   .btn {
-    @apply bg-lessWhite w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px] sm:min-w-[100px] sm:text-sm;
+    @apply bg-less-white w-fit text-center py-3 px-5 rounded-3xl font-light tracking-wide border border-white min-w-[150px] sm:min-w-[100px] sm:text-sm;
   }
   .btn:hover:not(:disabled) {
-    @apply bg-darkTurquoise text-white font-normal;
+    @apply bg-dark-turquoise text-white font-normal;
   }
   .btn:disabled {
     @apply cursor-not-allowed opacity-50;
