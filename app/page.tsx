@@ -27,14 +27,12 @@ const Home = () => {
 
   return (
     <main className="min-h-screen">
-      <Header />
       <Hero
         onJoinUsClick={scrollToJoinUs}
         onContactUsClick={scrollToContactUs}
       />
       <JoinUs ref={joinUsRef} onContactUsClick={scrollToContactUs} />
       <Contact ref={contactUsRef} />
-      <Footer />
     </main>
   );
 };
