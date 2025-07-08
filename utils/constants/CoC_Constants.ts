@@ -81,7 +81,6 @@ export const CoC_Contents: PageConstants = {
     "Respecting each other’s differing opinions, viewpoints and experiences",
     "Giving constructive feedback",
     "Focusing on what is not best for us as individuals, but for the overall community",
-    "Fostering empathy and kindness. Treating others the way you would want to be treated.",
     "Most importantly, having fun and creating a safe community",
   ],
   REFERRAL_POLICY_TEXT:

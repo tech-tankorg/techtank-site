@@ -1,11 +1,9 @@
 import { CoC_Contents } from "@/utils/constants/CoC_Constants";
-import Header from "../components/Header";
 import Link from "next/link";
 
 export default function CoC() {
   return (
     <>
-      <Header />
       <section className="codeOfConduct wrapper pb-6">
         <h2 className="text-center text-5xl p-3 m-3 uppercase font-light">
           Code of Conduct

@@ -13,6 +13,26 @@
   --color-dark-turquoise: #35938c;
   --color-light-turquoise: #6fe3e0;
   --radius-custom: 1% 75px;
+
+  --animate-fade-in: fade-in 100ms ease-in-out;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  --animate-fade-out: fade-out 100ms ease-in-out;
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
 }
 
 :root {

@@ -28,6 +28,7 @@ const Contact = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
 
   return (
     <div
+      id="contact-us" // Necessary for creating a link to the contact us section.
       ref={ref}
       className="min-h-[90vh] max-w-[1440px] mx-auto my-6 wrapper sm:pt-32"
     >
