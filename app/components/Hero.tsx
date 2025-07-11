@@ -1,14 +1,32 @@
+"use client";
+
 import Image from "next/image";
-import { MouseEventHandler } from "react";
+import { SharedStyles } from "../styles/shared-styles";
+import { twMerge } from "tailwind-merge";
+import { scrollToElement } from "@/utils/scroll-to-element";
 
-interface HeroProps {
-  onJoinUsClick: MouseEventHandler<HTMLButtonElement>;
-  onContactUsClick?: MouseEventHandler<HTMLButtonElement>;
-}
+export const Hero = () => {
+  const onJoinUsClick = () => {
+    const element = document.getElementById("join-us");
+    if (element) {
+      scrollToElement(element, { topOffset: 150 });
+    }
+  };
 
-const Hero: React.FC<HeroProps> = ({ onJoinUsClick, onContactUsClick }) => {
+  const onContactUsClick = () => {
+    const element = document.getElementById("contact-us");
+    if (element) {
+      scrollToElement(element);
+    }
+  };
+
   return (
-    <section className="flex flex-nowrap wrapper items-center justify-center gap-24 min-h-[90vh]">
+    <section
+      className={twMerge(
+        Styles.wrapper,
+        "flex flex-nowrap items-center justify-center gap-24 min-h-[90vh]"
+      )}
+    >
       <div>
         {/* H1 is visually hidden but still accessible to screen
           readers. */}
@@ -24,10 +42,10 @@ const Hero: React.FC<HeroProps> = ({ onJoinUsClick, onContactUsClick }) => {
           priority
         />
         <div className="flex gap-4 mt-10 justify-center">
-          <button onClick={onJoinUsClick} className="btn bg-white font-normal">
+          <button onClick={onJoinUsClick} className={SharedStyles.button}>
             Join Us
           </button>
-          <button className="btn" onClick={onContactUsClick}>
+          <button className={SharedStyles.button} onClick={onContactUsClick}>
             Contact Us
           </button>
         </div>
@@ -36,4 +54,6 @@ const Hero: React.FC<HeroProps> = ({ onJoinUsClick, onContactUsClick }) => {
   );
 };
 
-export default Hero;
+const Styles = {
+  wrapper: "max-w-[1440px] w-[90%] m-auto",
+};

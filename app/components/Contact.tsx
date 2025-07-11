@@ -1,9 +1,11 @@
 "use client";
 
-import React, { forwardRef, useState } from "react";
+import React, { useState } from "react";
 import { sendEmail } from "../../utils/service/emailService";
+import { SharedStyles } from "../styles/shared-styles";
+import { twMerge } from "tailwind-merge";
 
-const Contact = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
+export const Contact = () => {
   const [emailSent, setEmailSent] = useState<boolean>(false);
   const [emailErrored, setEmailErrored] = useState<boolean>(false);
   const [userName, setUserName] = useState<string>("");
@@ -29,8 +31,7 @@ const Contact = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
     <div
       id="contact-us" // Necessary for creating a link to the contact us section.
-      ref={ref}
-      className="min-h-[90vh] max-w-[1440px] mx-auto my-6 wrapper sm:pt-32"
+      className={twMerge(Styles.wrapper, "min-h-[90vh] mx-auto my-6 sm:pt-32")}
     >
       <h2 className="text-4xl text-center pb-6">Contact Us!</h2>
       <form
@@ -81,7 +82,11 @@ const Contact = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
         />
 
         <div className="flex justify-center">
-          <button type="submit" className="btn" disabled={!isFormValid}>
+          <button
+            type="submit"
+            className={SharedStyles.button}
+            disabled={!isFormValid}
+          >
             Send
           </button>
         </div>
@@ -99,7 +104,8 @@ const Contact = React.forwardRef<HTMLDivElement, {}>((props, ref) => {
       )}
     </div>
   );
-});
+};
 
-Contact.displayName = "Contact";
-export default Contact;
+const Styles = {
+  wrapper: "max-w-[1440px] w-[90%] m-auto",
+};

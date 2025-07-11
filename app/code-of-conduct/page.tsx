@@ -1,10 +1,13 @@
 import { CoC_Contents } from "@/utils/constants/CoC_Constants";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 export default function CoC() {
   return (
     <>
-      <section className="codeOfConduct wrapper pb-6">
+      <section
+        className={twMerge(Styles.wrapper, Styles.codeOfConduct, "pb-6")}
+      >
         <h2 className="text-center text-5xl p-3 m-3 uppercase font-light">
           Code of Conduct
         </h2>
@@ -102,3 +105,8 @@ export default function CoC() {
     </>
   );
 }
+
+const Styles = {
+  wrapper: "max-w-[1440px] w-[90%] m-auto",
+  codeOfConduct: "[&_p]:text-sm [&_li]:text-sm [&_h2]:text-4xl [&_h4]:text-2xl",
+};
