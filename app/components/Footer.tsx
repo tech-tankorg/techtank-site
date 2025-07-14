@@ -1,5 +1,6 @@
 import Link from "next/link";
 import navigation from "../../utils/constants/navigation";
+import { SharedStyles } from "../styles/shared-styles";
 
 export default function Footer() {
   return (
@@ -11,7 +12,7 @@ export default function Footer() {
         <div className="flex-1 flex flex-col justify-between sm:items-center">
           <p className="text-3xl text-less-white">Want to support us?</p>
           <Link href={"/"} className="sm:my-8">
-            <div className="btn">
+            <div className={SharedStyles.button}>
               <p>Make A Donation</p>
             </div>
           </Link>
