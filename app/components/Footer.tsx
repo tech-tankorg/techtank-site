@@ -8,16 +8,16 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-[1440px] w-[90%] px-6 flex sm:flex-col flex-row gap-4">
-        <div className="flex-1 flex flex-col justify-between sm:items-center">
-          <p className="text-3xl text-less-white">Want to support us?</p>
+      <div className="mx-auto max-w-[1440px] w-[90%] px-6 flex flex-col sm:flex-row gap-8">
+        <div className="flex-1 flex flex-col items-center gap-4 sm:gap-8">
+          <p className="text-3xl text-less-white text-center">Want to support us?</p>
           <Link href={"/"} className="sm:my-8">
             <div className={SharedStyles.button}>
               <p>Make A Donation</p>
             </div>
           </Link>
         </div>
-        <div className="flex-1 grid grid-cols-3 gap-4">
+        <div className="flex-1 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-8">
           <div>
             <h3 className="text-white font-bold">Our Events</h3>
             <ul role="list" className="mt-6 space-y-4">
@@ -63,7 +63,7 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-          <div className="flex mt-12 md:gap-4 gap-1 md:col-start-1 md:col-span-3 md:justify-center justify-start col-start-3">
+          <div className="flex flex-wrap justify-center gap-4 mt-8 sm:col-start-1 sm:col-span-3">
             {navigation.social.map((item) => (
               <Link
                 key={item.name}
