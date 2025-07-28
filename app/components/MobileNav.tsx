@@ -39,21 +39,24 @@ export function MobileNav() {
       >
         {/* top bar */}
         <span
-          className={`absolute block h-0.5 w-full bg-black transition-all duration-300 ease-in-out
-              ${isOpen ? "top-3.5 rotate-45" : "top-2"}
-            `}
+          className={twMerge(
+            Styles.hamburgerBar,
+            isOpen ? "top-3.5 rotate-45" : "top-2"
+          )}
         />
         {/* middle bar */}
         <span
-          className={`absolute block h-0.5 w-full bg-black transition-opacity duration-300
-              ${isOpen ? "opacity-0" : "top-4 opacity-100"}
-            `}
+          className={twMerge(
+            Styles.hamburgerBar,
+            isOpen ? "opacity-0" : "top-4 opacity-100"
+          )}
         />
         {/* bottom bar */}
         <span
-          className={`absolute block h-0.5 w-full bg-black transition-all duration-300 ease-in-out
-              ${isOpen ? "top-3.5 -rotate-45" : "top-6"}
-            `}
+          className={twMerge(
+            Styles.hamburgerBar,
+            isOpen ? "top-3.5 -rotate-45" : "top-6"
+          )}
         />
       </button>
       <Link href="/" className="flex items-center gap-4">
@@ -74,13 +77,13 @@ export function MobileNav() {
         )}
       >
         <div className="flex flex-col items-start justify-center gap-4">
-          {navigation.top.entries().map(([index, item]) =>
+          {Array.from(navigation.top.entries()).map(([index, item]) =>
             item.type === "item" ? (
               <Link
                 href={item.href}
                 key={item.name}
                 onClick={closeOverlay}
-                className={twMerge("text-3xl hover:underline")}
+                className={twMerge(Styles.menuLink)}
               >
                 {item.name}
               </Link>
@@ -101,7 +104,7 @@ export function MobileNav() {
                       href={subItem.href}
                       key={subItem.name}
                       onClick={closeOverlay}
-                      className={twMerge("text-xl hover:underline")}
+                      className={twMerge(Styles.menuLink)}
                     >
                       {subItem.name}
                     </Link>
@@ -115,3 +118,9 @@ export function MobileNav() {
     </nav>
   );
 }
+
+const Styles = {
+  hamburgerBar:
+    "absolute block h-0.5 w-full bg-black transition-all duration-300 ease-in-out",
+  menuLink: "text-3xl hover:underline",
+};
