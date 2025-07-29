@@ -5,4 +5,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: var(--background-image-gradient);
   @apply bg-cover;
+  /* Disable scrolling on mobile when nav is open */
+  @apply has-[nav[data-open=true]]:overflow-hidden sm:has-[nav[data-open=true]]:overflow-auto;
+}
+
+button:hover {
+  cursor: pointer;
 }
