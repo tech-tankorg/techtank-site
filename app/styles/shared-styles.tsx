@@ -16,4 +16,5 @@ export const SharedStyles = {
     "disabled:cursor-not-allowed",
     "disabled:opacity-50"
   ),
+  section: "md:px-16 px-4 py-12 pb-20",
 };
