@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -23,16 +23,12 @@ export default function TwoColumnCard({
   title,
   children,
   className = "",
-  transitionMs = 400,
   imageRight = false,
   bgClass = "bg-white",
 }: Props) {
 
   const [first_child, sec_child, third_child] = React.Children.toArray(children);
-
-  const imageRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
-  const [imageHeight, setImageHeight] = useState<string>("0px");
 
   const imageBlock = (
 
