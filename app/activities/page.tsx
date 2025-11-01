@@ -1,107 +1,130 @@
+"use client";
+
 import { EXTERNAL_LINKS, INTERNAL_LINKS } from "@/utils/constants/navigation";
 import Link from "next/link";
+import { useState, useRef, useEffect } from "react";
+import { SharedStyles } from "../styles/shared-styles";
+import TwoColumnCard from "./TwoColumnCard";
+import CollapsibleSection from "./CollapsibleSection";
 
 export default function ActivitiesPage() {
+
   return (
     <main>
-      <section>
-        <h1>Virtual Panel Discussion Series</h1>
-        <p>
-          TechTank's Virtual Panel Discussion Series (aka "Guppy Talks") aims to
-          support early-career devs and tech-enthusiasts in gaining more
-          confidence as a dev, and providing job-search or networking
-          tactics/suggestions for people to get into or flourish within the tech
-          industry.
-        </p>
-        <p>Chris Kim</p>
-        <Link href={EXTERNAL_LINKS.MEETUP}>Upcoming Events</Link>
-      </section>
-      <section>
-        <h1>Study Tank</h1>
-        <p>
-          Study Tank is a virtual initiative that aims to foster an environment
-          where tech enthusiasts can gather and discuss topics related to
-          software development. This includes, but is not limited to data
-          structure & algorithm problems, web fundamentals and any other
-          software-related topics. It also provides a space for you to seek
-          assistance and share any challenges with code, study materials, or
-          projects.
-        </p>
-        <p>Nonso Otoh</p>
-        <Link href={EXTERNAL_LINKS.STUDY_TANK_SLACK}>Upcoming Sessions</Link>
-      </section>
-      <section>
-        <h1>Mentorship</h1>
-        <p>
-          The Tech Tank Mentorship Program connects aspiring tech enthusiasts
-          with industry experts. It offers valuable insights, skill development,
-          and networking, empowering mentees to excel in the tech world.
-        </p>
-        <p>Sammy Lam</p>
-        <ul>
-          <li>
-            <Link href={EXTERNAL_LINKS.BE_A_MENTOR}>Be a Mentor</Link>
-          </li>
-          <li>
-            <Link href={EXTERNAL_LINKS.BE_A_MENTEE}>Be a Mentee</Link>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h1>Job Search Buddy</h1>
-        <p>
-          Navigating the job search can be daunting, but the TechTank Job Search
-          Buddy Program offers a supportive partnership. Rant, celebrate, and
-          learn together with a like-minded companion. Participants meet 1-2
-          times a week, fostering success stories and a well-established buddy
-          system. Connect with a compatible partner to navigate this journey
-          together and keep yourself accountable.
-        </p>
-        <p>Neal Panamdanam</p>
-        <p>Chris Kim</p>
-        <p>Niya Panamdanam</p>
-        <Link href={EXTERNAL_LINKS.JOB_SEARCH_BUDDY_SIGN_UP}>Sign Up</Link>
-      </section>
-      <section>
-        <h1>Tech Tank Socials</h1>
-        <p>
-          Tech Tank Socials are a vibrant community where developers come
-          together for non-coding activities. From networking events to
-          team-building outings, these gatherings foster connections,
-          relaxation, and a well-rounded tech community experience.
-        </p>
-        <p>Sammy Lam</p>
-        <p>Chris Kim</p>
-        <p>Riaz Virani</p>
-        <p>Neal Panamdanam</p>
-        <p>Niya Panamdanam</p>
-        <p>Nonso Otoh</p>
-        <Link href={EXTERNAL_LINKS.SOCIAL_SLACK}>Sign Up</Link>
-      </section>
-      <section>
-        <h1>Women & Non Binary Coffee Meets</h1>
-        <p>
-          Women & Non-Binary Coffee Meets in tech provide inclusive and
-          supportive spaces for women and non-binary individuals within the tech
-          industry to connect, share experiences, and foster professional
-          growth. These gatherings offer opportunities for networking,
-          mentorship, and discussions on pertinent industry topics.
-        </p>
-        <p>Niya Panamdanam</p>
-        <Link href={EXTERNAL_LINKS.DIVERSITY_SLACK}>Join Us</Link>
-      </section>
-      <section>
-        <h1>Toronto Tech Events Calendar</h1>
-        <p>
-          Toronto Tech Events Calendar is a convenient resource for all tech
-          events in Toronto, streamlining event discovery and scheduling. It's
-          designed to enhance networking opportunities, providing a one-stop
-          solution for staying informed and engaged in the Toronto Tech
-          community.
-        </p>
-        <p>Neal Panamdanam</p>
-        <Link href={EXTERNAL_LINKS.EVENTS_CALENDAR_SLACK}>Join Us</Link>
-      </section>
+      {/* Panel discussion card */}
+      <TwoColumnCard imageSrc="/activities-panel-diss.webp" title="Virtual Panel Discussion Series" bgClass="bg-white">
+        <CollapsibleSection title="Description">
+          <p>
+            TechTank's Virtual Panel Discussion Series (aka "Guppy Talks") aims to
+            support early-career devs and tech-enthusiasts in gaining more
+            confidence as a dev, and providing job-search or networking
+            tactics/suggestions for people to get into or flourish within the tech
+            industry.
+          </p>
+        </CollapsibleSection>
+        <CollapsibleSection title="Organizers">
+          <p>Chris Kim</p>
+        </CollapsibleSection>
+        <div className="mt-10">
+          <Link href={EXTERNAL_LINKS.MEETUP} className={SharedStyles.button}>Upcoming Events</Link>
+        </div>
+      </TwoColumnCard>
+
+      {/* Study Tank card */}
+      <TwoColumnCard imageSrc="/activities-panel-diss.webp" title="Study Tank" imageRight={true} bgClass="bg-[#f0effa]">
+        <CollapsibleSection title="Description">
+          <p>
+            Study Tank is a virtual initiative that aims to foster an environment
+            where tech enthusiasts can gather and discuss topics related to
+            software development, data structures & algorithms, web fundamentals,
+            and more.
+          </p>
+        </CollapsibleSection>
+        <CollapsibleSection title="Organizers">
+          <p>Nonso Otoh</p>
+        </CollapsibleSection>
+        {/* <div>
+          <Link href={EXTERNAL_LINKS.STUDY_TANK_SLACK}>Upcoming Sessions</Link>
+        </div> */}
+        <div className="mt-10">
+          <Link href={EXTERNAL_LINKS.STUDY_TANK_SLACK} className={SharedStyles.button}>Upcoming Sessions</Link>
+        </div>
+      </TwoColumnCard>
+      
+      {/* Mentorship cards */}
+      <TwoColumnCard imageSrc="/activities-panel-diss.webp" title="Mentorship" bgClass="bg-white">
+        <CollapsibleSection title="Description">
+          <p>
+            The Tech Tank Mentorship Program connects aspiring tech enthusiasts
+            with industry experts for guidance, skill development, and networking.
+          </p>
+        </CollapsibleSection>
+        <CollapsibleSection title="Organizers">
+          <p>Sammy Lam</p>
+        </CollapsibleSection>
+        <div className="flex flex-row gap-4 mt-6">
+            <div className={SharedStyles.button}><Link href={EXTERNAL_LINKS.BE_A_MENTOR}>Be a Mentor</Link></div>
+            <div className={SharedStyles.button}><Link href={EXTERNAL_LINKS.BE_A_MENTEE}>Be a Mentee</Link></div>
+        </div>
+      </TwoColumnCard>
+
+      {/* Job Search Buddy card */}
+      <TwoColumnCard imageSrc="/activities-panel-diss.webp" title="Job Search Buddy" bgClass="bg-[#f0effa]" imageRight={true}>
+        <CollapsibleSection title="Description">
+          <p>
+            The Job Search Buddy Program pairs participants to support one another
+            through the job search process with regular check-ins and accountability.
+          </p>
+        </CollapsibleSection>
+        <CollapsibleSection title="Organizers">
+          <p>Neal Panamdanam</p>
+          <p>Chris</p>
+          <p>Niya Panamdanam</p>
+        </CollapsibleSection>
+        <div className="mt-10">
+          <Link href={EXTERNAL_LINKS.JOB_SEARCH_BUDDY_SIGN_UP} className={SharedStyles.button}>Sign Up</Link>
+        </div>
+
+      </TwoColumnCard>
+
+      {/* Tech tank socials cards */}
+      <TwoColumnCard imageSrc="/activities-panel-diss.webp" title="Tech Tank Socials" bgClass="bg-white">
+        <CollapsibleSection title="Description">
+          <p>Community socials for relaxation, networking, and team activities.</p>
+        </CollapsibleSection>
+        <CollapsibleSection title="Organizers">
+          <p>Sammy Lam, Chris Kim, Riaz Virani, Neal Panamdanam, Niya Panamdanam, Nonso Otoh</p>
+        </CollapsibleSection>
+        <div className="mt-10">
+          <Link href={EXTERNAL_LINKS.SOCIAL_SLACK} className={SharedStyles.button}>Sign Up</Link>
+        </div>
+      </TwoColumnCard>
+
+      {/* Diversity & Inclusion card */}
+      <TwoColumnCard imageSrc="/activities-panel-diss.webp" title="Women & Non-Binary Coffee Meets" bgClass="bg-[#f0effa]" imageRight={true}>
+        <CollapsibleSection title="Description">
+          <p>Inclusive meetups for women & non-binary folks in tech to connect and grow.</p>
+        </CollapsibleSection>
+        <CollapsibleSection title="Organizers">
+          <p>Niya Panamdanam</p>
+        </CollapsibleSection>
+        <div className="mt-10">
+          <Link href={EXTERNAL_LINKS.DIVERSITY_SLACK} className={SharedStyles.button}>Join Us</Link>
+        </div>
+      </TwoColumnCard>
+
+      {/* Events Calendar card */}
+      <TwoColumnCard imageSrc="/activities-panel-diss.webp" title="Toronto Tech Events Calendar" bgClass="bg-white">
+        <CollapsibleSection title="Description">
+          <p>A calendar of local tech events to help the community discover and attend events.</p>
+        </CollapsibleSection>
+        <CollapsibleSection title="Organizers">
+          <p>Neal Panamdanam</p>
+        </CollapsibleSection>
+        <div className="mt-10">
+          <Link href={EXTERNAL_LINKS.EVENTS_CALENDAR_SLACK} className={SharedStyles.button}>Join Us</Link>
+        </div>
+      </TwoColumnCard>
     </main>
   );
 }
