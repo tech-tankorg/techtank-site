@@ -21,8 +21,8 @@ export const JoinUs = () => {
     <div id="join-us" className="min-h-[90vh] max-w-[1440px] mx-auto my-6">
       <h2 className="text-4xl text-center">Join Us!</h2>
 
-      <div className="flex flex-col items-center">
-        <div className="flex justify-center gap-8 mt-10 flex-col items-center lg:gap-24 md:gap-16 sm:gap-12 sm:flex-row sm:items-center">
+      <div className="flex  flex-col items-center">
+        <div className="flex flex-wrap justify-center gap-8 mt-10 flex-col items-center lg:gap-24 md:gap-16 sm:gap-12 sm:flex-row sm:items-center">
           <div className={Styles.card}>
             <Link
               target="_blank"
