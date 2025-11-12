@@ -30,8 +30,6 @@ export const EXTERNAL_LINKS = {
 const navigation = {
   top: [
     { name: "About", type: "item", href: INTERNAL_LINKS.ABOUT },
-    { name: "Activities", type: "item", href: INTERNAL_LINKS.ACTIVITIES },
-    { name: "Mentors", type: "item", href: INTERNAL_LINKS.MENTORS },
     {
       name: "Events",
       type: "dropdown",
@@ -41,7 +39,6 @@ const navigation = {
         { name: "Be a Speaker", href: INTERNAL_LINKS.SPEAK },
       ],
     },
-    { name: "Donate", type: "item", href: INTERNAL_LINKS.DONATE },
     {
       name: "Code of Conduct",
       type: "item",
@@ -53,7 +50,6 @@ const navigation = {
     { name: "Host Us", href: INTERNAL_LINKS.HOST },
     { name: "Be a Speaker", href: INTERNAL_LINKS.SPEAK },
   ],
-  initiatives: [{ name: "Mentorship", href: INTERNAL_LINKS.MENTORS }],
   legal: [
     { name: "Terms & Conditions", href: INTERNAL_LINKS.TERMS_CONDITIONS },
     { name: "Code of Conduct", href: INTERNAL_LINKS.CODE_OF_CONDUCT },
