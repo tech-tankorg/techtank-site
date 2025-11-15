@@ -5,6 +5,7 @@ import Link from "next/link";
 import Slack from "../../public/slack-cropped.png";
 import Meetup from "../../public/Meetup_Logo.png";
 import Github from "../../public/GitHub_Invertocat_Logo.svg";
+import Luma from "../../public/Luma_Logo.png";
 import { twMerge } from "tailwind-merge";
 import { SharedStyles } from "../styles/shared-styles";
 import { scrollToElement } from "@/utils/scroll-to-element";
@@ -20,8 +21,8 @@ export const JoinUs = () => {
     <div id="join-us" className="min-h-[90vh] max-w-[1440px] mx-auto my-6">
       <h2 className="text-4xl text-center">Join Us!</h2>
 
-      <div className="flex flex-col items-center">
-        <div className="flex justify-center gap-8 mt-10 flex-col items-center lg:gap-24 md:gap-16 sm:gap-12 sm:flex-row sm:items-center">
+      <div className="flex  flex-col items-center">
+        <div className="flex flex-wrap justify-center gap-8 mt-10 flex-col items-center lg:gap-24 md:gap-16 sm:gap-12 sm:flex-row sm:items-center">
           <div className={Styles.card}>
             <Link
               target="_blank"
@@ -60,6 +61,26 @@ export const JoinUs = () => {
               <p className={Styles.cardBody}>
                 Join us on Meetup for in-person events and networking sessions
                 based in Toronto!
+              </p>
+            </Link>
+          </div>
+
+          <div className={Styles.card}>
+            <Link
+              target="_blank"
+              href="https://luma.com/user/usr-LRrXJBjcnu8JaOF"
+              className={Styles.link}
+            >
+              <Image
+                src={Luma}
+                alt="luma icon"
+                width={175}
+                height={175}
+                className={Styles.img}
+              />
+              <h3 className={Styles.cardHeader}>Luma</h3>
+              <p className={Styles.cardBody}>
+                Join us on Luma to RSVP for in-person events and networking sessions!
               </p>
             </Link>
           </div>
