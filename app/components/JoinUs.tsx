@@ -6,6 +6,8 @@ import Slack from "../../public/slack-cropped.png";
 import Meetup from "../../public/Meetup_Logo.png";
 import Github from "../../public/GitHub_Invertocat_Logo.svg";
 import Luma from "../../public/Luma_Logo.png";
+import LinkedIn from "../../public/LinkedIn.png";
+import Instagram from "../../public/Instagram.svg";
 import { twMerge } from "tailwind-merge";
 import { SharedStyles } from "../styles/shared-styles";
 import { scrollToElement } from "@/utils/scroll-to-element";
@@ -102,6 +104,44 @@ export const JoinUs = () => {
               <p className={Styles.cardBody}>
                 Join our Github organization to contribute towards our
                 open-source community!
+              </p>
+            </Link>
+          </div>
+          <div className={Styles.card}>
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/company/techtank-to/"
+              className={Styles.link}
+            >
+              <Image
+                src={LinkedIn}
+                alt="slack icon"
+                width={175}
+                height={175}
+                className={Styles.img}
+              />
+              <h3 className={Styles.cardHeader}>LinkedIn</h3>
+              <p className={Styles.cardBody}>
+                Stay connected with us on LinkedIn for the latest updates on networking and social events.
+              </p>
+            </Link>
+          </div>
+          <div className={Styles.card}>
+            <Link
+              target="_blank"
+              href="https://www.instagram.com/techtankto/"
+              className={Styles.link}
+            >
+              <Image
+                src={Instagram}
+                alt="slack icon"
+                width={175}
+                height={175}
+                className={Styles.img}
+              />
+              <h3 className={Styles.cardHeader}>Instagram</h3>
+              <p className={Styles.cardBody}>
+                Follow us on Instagram to see some of  our latest social and networking events!
               </p>
             </Link>
           </div>
