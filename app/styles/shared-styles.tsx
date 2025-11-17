@@ -16,5 +16,11 @@ export const SharedStyles = {
     "disabled:cursor-not-allowed",
     "disabled:opacity-50"
   ),
-  section: "md:px-16 px-4 py-12 pb-20",
+  section: "px-16 py-12 pb-20",
+  sectionHeader: "text-6xl mb-12",
+  subHeader: "text-2xl/loose",
+  logisticsItem: "mb-8",
+  itemHeader: "text-xl/loose font-light",
+  paragraph: "text-base/loose font-light text-justify",
+  buttonAlt: "block size-max bg-black text-white px-12 py-6 rounded-full font-bold",
 };
