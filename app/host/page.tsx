@@ -21,6 +21,12 @@ export default function HostPage() {
             before and after. We rely upon sponsorship from companies in the
             Toronto area to provide a venue and food for that event.
           </p>
+          <br/>
+          <p className={Styles.paragraph}>
+            Interested in sponsoring a future event? Tell us about your
+            company or organization and we’ll follow up with the sponsorship package and
+            next steps.
+          </p> 
           <Link
             href="/#contact-us"
             className={twMerge(Styles.button, "mt-12 float-end")}
