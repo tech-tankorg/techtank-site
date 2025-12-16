@@ -65,27 +65,27 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div>
             <h4 className={Styles.itemHeader}>Students</h4>
-            <p className={Styles.paragraph}>
-              and early-career professionals exploring opportunities
+            <p className={twMerge(Styles.paragraph, "text-left")}>
+              and early career professionals exploring industry opportunities
             </p>
           </div>
           <div>
             <h4 className={Styles.itemHeader}>Industry Professionals </h4>
-            <p className={Styles.paragraph}>
+            <p className={twMerge(Styles.paragraph, "text-left")}>
               looking to mentor, recruit, or collaborate with passionate
               learners
             </p>
           </div>
           <div>
             <h4 className={Styles.itemHeader}>Tech Enthusiasts</h4>
-            <p className={Styles.paragraph}>
+            <p className={twMerge(Styles.paragraph, "text-left")}>
               and entrepreneurs sharing ideas and discovering emerging
               technologies
             </p>
           </div>
           <div>
             <h4 className={Styles.itemHeader}>Community Members</h4>
-            <p className={Styles.paragraph}>
+            <p className={twMerge(Styles.paragraph, "text-left")}>
               who value engaging, and socially impactful tech spaces
             </p>
           </div>
