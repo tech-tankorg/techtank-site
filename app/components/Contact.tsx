@@ -36,7 +36,7 @@ export const Contact = () => {
       <h2 className="text-4xl text-center pb-6">Contact Us!</h2>
       <form
         onSubmit={sendFormEmail}
-        className="flex flex-col w-[600px] mx-auto sm:w-[90%]"
+        className="flex flex-col mx-auto sm:w-[90%]"
       >
         <label
           htmlFor="user_name"
