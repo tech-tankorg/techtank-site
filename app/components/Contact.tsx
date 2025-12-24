@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { sendEmail } from "../../utils/service/emailService";
 import { SharedStyles } from "../styles/shared-styles";
-import { twMerge } from "tailwind-merge";
 
 export const Contact = () => {
   const [emailSent, setEmailSent] = useState<boolean>(false);
@@ -29,9 +28,9 @@ export const Contact = () => {
   };
 
   return (
-    <div
+    <section
       id="contact-us" // Necessary for creating a link to the contact us section.
-      className={twMerge(Styles.wrapper, "min-h-[90vh] mx-auto my-6 sm:pt-32")}
+      className="my-6 sm:pt-32"
     >
       <h2 className="text-4xl text-center pb-6">Contact Us!</h2>
       <form
@@ -102,10 +101,7 @@ export const Contact = () => {
           Something went wrong🥺. Please try again!
         </p>
       )}
-    </div>
+    </section>
   );
 };
 
-const Styles = {
-  wrapper: "max-w-[1440px] w-[90%] m-auto",
-};

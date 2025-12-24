@@ -5,7 +5,7 @@ import { Contact } from "./components/Contact";
 
 const Home = () => {
   return (
-    <main className="min-h-screen">
+    <main className="wrapper min-h-dvh space-y-32 pb-32">
       <Hero />
       <JoinUs />
       <Sponsors />
