@@ -86,6 +86,6 @@
 
 .wrapper {
   width: 90%;
-  max-width: var(--container-7xl);
+  max-width: var(--container-8xl);
   margin: 0rem auto;
 }
