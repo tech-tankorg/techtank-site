@@ -72,8 +72,16 @@
   }
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url(/fonts/Nunito-VariableFont_wght.ttf);
+}
+
 :root {
   --background-image-gradient: url("../../public/gradient-vertical.png");
+}
+* {
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
