@@ -20,7 +20,7 @@ export const JoinUs = () => {
     }
   };
   return (
-    <div id="join-us" className="my-6">
+    <section id="join-us" className="my-6">
       <h2 className="text-4xl text-center">Join Us!</h2>
 
       <div className="flex  flex-col items-center">
@@ -153,7 +153,7 @@ export const JoinUs = () => {
           Contact Us
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
