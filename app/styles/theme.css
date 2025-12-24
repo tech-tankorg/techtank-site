@@ -30,6 +30,7 @@
   --color-dark-turquoise: #35938c;
   --color-light-turquoise: #6fe3e0;
   --color-light-sand: #fff4ee;
+  /* Base Styles - Layout */
   --breakpoint-xl: 80rem;
   --breakpoint-lg: 64rem;
   --breakpoint-md: 55.625rem;
