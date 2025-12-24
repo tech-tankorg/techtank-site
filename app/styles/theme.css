@@ -73,3 +73,9 @@
 :root {
   --background-image-gradient: url("../../public/gradient-vertical.png");
 }
+
+.wrapper {
+  width: 90%;
+  max-width: var(--container-7xl);
+  margin: 0rem auto;
+}
