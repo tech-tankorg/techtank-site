@@ -2,7 +2,7 @@ import { twMerge } from "tailwind-merge";
 
 export const SharedStyles = {
   button: twMerge(
-    "bg-less-white",
+    "bg-white",
     "w-fit",
     "text-center",
     "py-3 px-5",
@@ -13,8 +13,6 @@ export const SharedStyles = {
     "hover:not-disabled:bg-dark-turquoise",
     "hover:not-disabled:text-white",
     "hover:not-disabled:font-normal",
-    "disabled:cursor-not-allowed",
-    "disabled:opacity-50"
   ),
   section: "px-16 py-12 pb-20",
   sectionHeader: "text-6xl mb-12",
@@ -23,4 +21,22 @@ export const SharedStyles = {
   itemHeader: "text-xl/loose font-light",
   paragraph: "text-base/loose font-light text-justify",
   buttonAlt: "block size-max bg-black text-white px-12 py-6 rounded-full font-bold",
+  card: twMerge(
+    "flex",
+    "bg-white",
+    "w-[20%]",
+    "rounded-custom",
+    "min-w-[200px]",
+    "md:min-w-[250px]",
+    "h-[325px]",
+    "md:h-[400px]",
+    "hover:shadow-lg",
+    "transition-all",
+    "duration-300",
+    "ease-in-out"
+  ),
+  cardHeader: "font-bold md:text-2xl text-xl",
+  cardBody: "w-[80%] text-center md:mt-5 md:text-sm text-xs my-3",
+  link: "flex flex-col items-center justify-center",
+  img: "md:pb-6 w-[150px] h-auto pb-3",
 };
