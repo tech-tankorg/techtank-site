@@ -7,6 +7,7 @@
   --breakpoint-sm: 47.5rem;
   --breakpoint-xs: 25.875rem;
   --breakpoint-xxs: 23.4375rem;
+  --container-8xl: 90rem;
   --color-white: #ffffff;
   --color-less-white: #f8f9fa;
   --color-black: #000;
@@ -37,7 +38,7 @@
   --color-brand-accent-800: #91300f;
   --color-brand-accent-900: #772810;
   --color-brand-accent-950: #441204;
-
+  
   --animate-fade-in: fade-in 100ms ease-in-out;
   @keyframes fade-in {
     from {
