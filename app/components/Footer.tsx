@@ -1,6 +1,5 @@
 import Link from "next/link";
 import navigation from "../../utils/constants/navigation";
-import { SharedStyles } from "../styles/shared-styles";
 
 export default function Footer() {
   return (
