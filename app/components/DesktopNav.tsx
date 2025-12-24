@@ -8,7 +8,7 @@ export function DesktopNav() {
   return (
     <nav
       className={twMerge(
-        Styles.wrapper,
+        "wrapper",
         "flex justify-between items-center py-5",
         "hidden sm:flex"
       )}
@@ -66,7 +66,3 @@ export function DesktopNav() {
     </nav>
   );
 }
-
-const Styles = {
-  wrapper: "max-w-[1440px] w-[90%] m-auto",
-};

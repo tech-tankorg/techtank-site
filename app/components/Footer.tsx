@@ -8,7 +8,7 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-[1440px] w-[90%] px-6 flex flex-col sm:flex-row gap-8">
+      <div className="wrapper px-6 flex flex-col sm:flex-row gap-8">
         <div className="flex-1 grid grid-cols-1 xs:grid-cols-2  gap-8">
           <div>
             <h3 className="text-white font-bold">Our Events</h3>

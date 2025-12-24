@@ -11,9 +11,8 @@ import Vena from "../../public/Vena.svg";
 export const Sponsors = () => {
 
   return (
-    <div id="past-sponsors" className="max-w-[1440px] mx-auto my-6 sm:pt-32">
+    <div id="past-sponsors" className="my-6 py-24">
       <h2 className="text-4xl text-center">Our Past Sponsors</h2>
-
       <section>
         <div className="logos group relative overflow-hidden whitespace-nowrap py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
           <div className="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">

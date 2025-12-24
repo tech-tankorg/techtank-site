@@ -20,7 +20,7 @@ export const JoinUs = () => {
     }
   };
   return (
-    <div id="join-us" className="min-h-[90vh] max-w-[1440px] mx-auto my-6">
+    <div id="join-us" className="my-6">
       <h2 className="text-4xl text-center">Join Us!</h2>
 
       <div className="flex  flex-col items-center">

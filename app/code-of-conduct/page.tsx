@@ -6,7 +6,7 @@ export default function CoC() {
   return (
     <>
       <section
-        className={twMerge(Styles.wrapper, Styles.codeOfConduct, "pb-6")}
+        className={twMerge("wrapper", Styles.codeOfConduct, "pb-6")}
       >
         <h2 className="text-center text-5xl p-3 m-3 uppercase font-light">
           Code of Conduct
@@ -107,6 +107,5 @@ export default function CoC() {
 }
 
 const Styles = {
-  wrapper: "max-w-[1440px] w-[90%] m-auto",
-  codeOfConduct: "[&_p]:text-sm [&_li]:text-sm [&_h2]:text-4xl [&_h4]:text-2xl",
+  codeOfConduct: "*:text-sm [&_li]:text-sm [&_h2]:text-4xl [&_h4]:text-2xl",
 };

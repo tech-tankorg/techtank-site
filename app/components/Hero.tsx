@@ -23,8 +23,8 @@ export const Hero = () => {
   return (
     <section
       className={twMerge(
-        Styles.wrapper,
-        "flex flex-nowrap items-center justify-center gap-24 min-h-[90vh]"
+        "wrapper min-h-[90vh]",
+        "flex flex-nowrap items-center justify-center gap-24"
       )}
     >
       <div>
