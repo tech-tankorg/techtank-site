@@ -17,7 +17,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm leading-6 text-light-turquoise underline hover:text-white"
+                    className="text-sm leading-6 text-brand-primary-600 underline hover:text-white"
                   >
                     {item.name}
                   </Link>
@@ -32,7 +32,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm leading-6 text-light-turquoise underline hover:text-white"
+                    className="text-sm leading-6 text-brand-primary-600 underline hover:text-white"
                   >
                     {item.name}
                   </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-less-white hover:text-light-turquoise"
+                className="text-less-white hover:text-brand-primary-600"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon
