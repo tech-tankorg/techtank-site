@@ -8,13 +8,29 @@
   --breakpoint-xs: 25.875rem;
   --breakpoint-xxs: 23.4375rem;
   --color-white: #ffffff;
-  --color-less-white: #f0f9ff;
+  --color-less-white: #f8f9fa;
   --color-black: #000;
   --color-dark-turquoise: #35938c;
   --color-light-turquoise: #6fe3e0;
   --color-light-sand: #fff4ee;
   --radius-custom: 1% 75px;
+  /* Colors */
+--color-brand-primary-50: #ecfffe;
+--color-brand-primary-100: #cefffd;
+--color-brand-primary-200: #a3fefd;
+--color-brand-primary-300: #63fdfd;
+--color-brand-primary-400: #1df0f3;
+--color-brand-primary-500: #01d3d9;
+--color-brand-primary-600: #04a8b6;
+--color-brand-primary-700: #0b8896;
+--color-brand-primary-800: #136a77;
+--color-brand-primary-900: #145865;
+--color-brand-primary-950: #073b45;
 
+
+
+
+  
   --animate-fade-in: fade-in 100ms ease-in-out;
   @keyframes fade-in {
     from {
