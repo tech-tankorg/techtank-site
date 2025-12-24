@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Slack from "../../public/slack-cropped.png";
-import Meetup from "../../public/Meetup_Logo.png";
-import Github from "../../public/GitHub_Invertocat_Logo.svg";
-import Luma from "../../public/Luma_Logo.png";
-import LinkedIn from "../../public/LinkedIn.png";
-import Instagram from "../../public/Instagram.svg";
+import Slack from "@/public/images/slack-cropped.png";
+import Meetup from "@/public/images/Meetup_Logo.png";
+import Github from "@/public/graphics/GitHub_Invertocat_Logo.svg";
+import Luma from "@/public/images/Luma_Logo.png";
+import LinkedIn from "@/public/images/LinkedIn.png";
+import Instagram from "@/public/graphics/Instagram.svg";
 import { twMerge } from "tailwind-merge";
 import { SharedStyles } from "../styles/shared-styles";
 import { scrollToElement } from "@/utils/scroll-to-element";

@@ -78,7 +78,7 @@
 }
 
 :root {
-  --background-image-gradient: url("../../public/gradient-vertical.png");
+  --background-image-gradient: url("../../public/images/gradient-vertical.png");
 }
 * {
   font-family: "Nunito", Arial, Helvetica, sans-serif;
