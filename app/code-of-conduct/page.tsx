@@ -4,21 +4,24 @@ import { twMerge } from "tailwind-merge";
 
 export default function CoC() {
   return (
-    <>
-      <section
-        className={twMerge(Styles.wrapper, Styles.codeOfConduct, "pb-6")}
-      >
-        <h2 className="text-center text-5xl p-3 m-3 uppercase font-light">
+    <main
+      className={twMerge(
+        "wrapper min-h-dvh",
+        "*:text-base/relaxed [&_h2]:text-4xl [&_h4]:text-2xl"
+      )}
+    >
+      <article className="max-w-[760px] mx-auto space-y-12 my-24">
+        <h2 className="text-5xl font-light uppercase text-center">
           Code of Conduct
         </h2>
         {/* SCOPE */}
-        <div className="my-6">
-          <h4 className="text-3xl uppercase font-light pb-2">Scope</h4>
+        <section>
+          <h4 className="text-3xl uppercase pb-2">Scope</h4>
           <p>{CoC_Contents.SCOPE_TEXT}</p>
-        </div>
+        </section>
         {/* ENFORCEMENT */}
-        <div className="my-6">
-          <h4 className="text-3xl uppercase font-light pb-2">Enforcement</h4>
+        <section>
+          <h4 className="text-3xl uppercase pb-2">Enforcement</h4>
           <p className="pb-2">{CoC_Contents.ENFORCEMENT_TEXT}</p>
           <ul>
             {CoC_Contents.ENFORCEMENT_LIST.map((list) => (
@@ -30,10 +33,10 @@ export default function CoC() {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
         {/* UNACCEPTABLE BEHAVIOR */}
-        <div className="my-6">
-          <h4 className="text-3xl uppercase font-light pb-2">
+        <section>
+          <h4 className="text-3xl uppercase pb-2">
             Unacceptable Behavior
           </h4>
           <ul>
@@ -55,11 +58,11 @@ export default function CoC() {
               </Link>
             </p>
           </ul>
-        </div>
+        </section>
         {/* TODO: make the 2 examples into a 2 column table */}
         {/* EXAMPLES OF UNACCEPTABLES */}
-        <div className="my-6">
-          <h4 className="text-3xl uppercase font-light pb-2">
+        <section>
+          <h4 className="text-3xl uppercase pb-2">
             Examples of Unaccepted Behaviors:
           </h4>
           <ul>
@@ -69,10 +72,10 @@ export default function CoC() {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
         {/* ACCEPTABLE BEHAVIOR */}
-        <div className="my-6">
-          <h4 className="text-3xl uppercase font-light pb-2">
+        <section>
+          <h4 className="text-3xl uppercase pb-2">
             Examples of Acceptable Behaviors
           </h4>
           <ul>
@@ -82,10 +85,10 @@ export default function CoC() {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
         {/* REFERRAL POLICY */}
-        <div className="my-6">
-          <h4 className="text-3xl uppercase font-light pb-2">
+        <section>
+          <h4 className="text-3xl uppercase pb-2">
             Referral Policy
           </h4>
           <p>{CoC_Contents.REFERRAL_POLICY_TEXT}</p>
@@ -100,13 +103,8 @@ export default function CoC() {
             ))}
           </ul>
           <p>{CoC_Contents.REFERRAL_POLICY_CONCL}</p>
-        </div>
-      </section>
-    </>
+        </section>
+      </article>
+    </main>
   );
 }
-
-const Styles = {
-  wrapper: "max-w-[1440px] w-[90%] m-auto",
-  codeOfConduct: "[&_p]:text-sm [&_li]:text-sm [&_h2]:text-4xl [&_h4]:text-2xl",
-};

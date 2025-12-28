@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { SharedStyles } from "../styles/shared-styles";
-import { twMerge } from "tailwind-merge";
 import { scrollToElement } from "@/utils/scroll-to-element";
 
 export const Hero = () => {
@@ -21,12 +20,7 @@ export const Hero = () => {
   };
 
   return (
-    <section
-      className={twMerge(
-        Styles.wrapper,
-        "flex flex-nowrap items-center justify-center gap-24 min-h-[90vh]"
-      )}
-    >
+    <section className="min-h-[90dvh] flex flex-nowrap items-center justify-center gap-24">
       <div>
         {/* H1 is visually hidden but still accessible to screen
           readers. */}
@@ -34,7 +28,7 @@ export const Hero = () => {
           TechTank
         </h1>
         <Image
-          src="/full_logo.svg"
+          src="/graphics/full_logo.svg"
           width={150}
           height={150}
           alt="tech tech fish logo"
@@ -54,6 +48,3 @@ export const Hero = () => {
   );
 };
 
-const Styles = {
-  wrapper: "max-w-[1440px] w-[90%] m-auto",
-};

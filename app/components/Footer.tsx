@@ -1,6 +1,5 @@
 import Link from "next/link";
 import navigation from "../../utils/constants/navigation";
-import { SharedStyles } from "../styles/shared-styles";
 
 export default function Footer() {
   return (
@@ -8,7 +7,7 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-[1440px] w-[90%] px-6 flex flex-col sm:flex-row gap-8">
+      <div className="wrapper px-6 flex flex-col sm:flex-row gap-8">
         <div className="flex-1 grid grid-cols-1 xs:grid-cols-2  gap-8">
           <div>
             <h3 className="text-white font-bold">Our Events</h3>
@@ -17,7 +16,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm leading-6 text-light-turquoise underline hover:text-white"
+                    className="text-sm leading-6 text-brand-primary-600 underline hover:text-white"
                   >
                     {item.name}
                   </Link>
@@ -32,7 +31,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm leading-6 text-light-turquoise underline hover:text-white"
+                    className="text-sm leading-6 text-brand-primary-600 underline hover:text-white"
                   >
                     {item.name}
                   </Link>
@@ -45,7 +44,7 @@ export default function Footer() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-less-white hover:text-light-turquoise"
+                className="text-less-white hover:text-brand-primary-600"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon

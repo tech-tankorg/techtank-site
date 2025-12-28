@@ -1,20 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import Intuit from "../../public/intuit.svg";
-import Kobo from "../../public/RakutenKobo.png";
-import Microsoft from "../../public/microsoft.svg";
-import Points from "../../public/points.png";
-import Prema from "../../public/PremaCoffee.png";
-import Vena from "../../public/Vena.svg";
+import Intuit from "@/public/graphics/intuit.svg";
+import Kobo from "@/public/images/RakutenKobo.png";
+import Microsoft from "@/public/graphics/microsoft.svg";
+import Points from "@/public/images/points.png";
+import Prema from "@/public/images/PremaCoffee.png";
+import Vena from "@/public/graphics/Vena.svg";
 
 export const Sponsors = () => {
 
   return (
-    <div id="past-sponsors" className="max-w-[1440px] mx-auto my-6 sm:pt-32">
+    <section id="past-sponsors" className="my-6 py-24">
       <h2 className="text-4xl text-center">Our Past Sponsors</h2>
-
-      <section>
+      <div>
         <div className="logos group relative overflow-hidden whitespace-nowrap py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
           <div className="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
             <Image
@@ -106,8 +105,8 @@ export const Sponsors = () => {
             />
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

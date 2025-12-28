@@ -1,20 +1,46 @@
 @import "tailwindcss";
 
 @theme {
+  /* Base Styles - Brand/Colors */
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-brand-primary-50: #ecfffe;
+  --color-brand-primary-100: #cefffd;
+  --color-brand-primary-200: #a3fefd;
+  --color-brand-primary-300: #63fdfd;
+  --color-brand-primary-400: #1df0f3;
+  --color-brand-primary-500: #01d3d9;
+  --color-brand-primary-600: #04a8b6;
+  --color-brand-primary-700: #0b8896;
+  --color-brand-primary-800: #136a77;
+  --color-brand-primary-900: #145865;
+  --color-brand-primary-950: #073b45;
+  --color-brand-accent-50: #fff9eb;
+  --color-brand-accent-100: #fdecc8;
+  --color-brand-accent-200: #fcd78b;
+  --color-brand-accent-300: #fab842;
+  --color-brand-accent-400: #f9a426;
+  --color-brand-accent-500: #f3800d;
+  --color-brand-accent-600: #d75d08;
+  --color-brand-accent-700: #b23e0b;
+  --color-brand-accent-800: #91300f;
+  --color-brand-accent-900: #772810;
+  --color-brand-accent-950: #441204;
+  --color-less-white: #f8f9fa;
+  --color-dark-turquoise: #35938c;
+  --color-light-turquoise: #6fe3e0;
+  --color-light-sand: #fff4ee;
+  /* Base Styles - Layout */
   --breakpoint-xl: 80rem;
   --breakpoint-lg: 64rem;
   --breakpoint-md: 55.625rem;
   --breakpoint-sm: 47.5rem;
   --breakpoint-xs: 25.875rem;
   --breakpoint-xxs: 23.4375rem;
-  --color-white: #ffffff;
-  --color-less-white: #f0f9ff;
-  --color-black: #000;
-  --color-dark-turquoise: #35938c;
-  --color-light-turquoise: #6fe3e0;
-  --color-light-sand: #fff4ee;
+  --container-8xl: 90rem;
   --radius-custom: 1% 75px;
 
+  
   --animate-fade-in: fade-in 100ms ease-in-out;
   @keyframes fade-in {
     from {
@@ -46,6 +72,20 @@
   }
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url(/fonts/Nunito-VariableFont_wght.ttf);
+}
+
 :root {
-  --background-image-gradient: url("../../public/gradient-vertical.png");
+  --background-image-gradient: url("../../public/images/gradient-vertical.png");
+}
+* {
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: var(--container-8xl);
+  margin: 0rem auto;
 }
