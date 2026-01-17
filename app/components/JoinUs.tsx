@@ -70,7 +70,7 @@ export const JoinUs = () => {
           <div className={Styles.card}>
             <Link
               target="_blank"
-              href="https://luma.com/user/usr-LRrXJBjcnu8JaOF"
+              href="https://luma.com/techtank?period=past"
               className={Styles.link}
             >
               <Image
