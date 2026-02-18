@@ -28,7 +28,7 @@ export const JoinUs = () => {
           <div className={Styles.card}>
             <Link
               target="_blank"
-              href="https://join.slack.com/t/thetechtank/shared_invite/zt-3nhiu998n-WDE4U0_CL5CKxfpwOLTRIw"
+              href="https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA"
               className={Styles.link}
             >
               <Image
