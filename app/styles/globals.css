@@ -4,6 +4,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: var(--background-image-gradient);
+  font-family: Nunito, Arial, Helvetica, sans-serif;
   @apply bg-cover;
   /* Disable scrolling on mobile when nav is open */
   @apply has-[nav[data-open=true]]:overflow-hidden sm:has-[nav[data-open=true]]:overflow-auto;
