@@ -76,36 +76,3 @@
     }
   }
 }
-
-:root {
-  --background-image-gradient: url("../../public/gradient-vertical.png");
-}
-@font-face {
-  font-family: "Nunito";
-  src: url("/assets/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900; /* Variable range */
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Nunito-Italic";
-  src: url("/assets/fonts/Nunito-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 900; /* Variable range */
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PoetsenOne";
-  src: url("/assets/fonts/PoetsenOne-Regular.ttf") format("truetype");
-  font-weight: 100; /* Variable range */
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "LostFish-5DOz";
-  src: url("/assets/fonts/LostFish-5DOz.ttf") format("truetype");
-  font-weight: 100; /* Variable range */
-  font-style: normal;
-  font-display: swap;
-}
