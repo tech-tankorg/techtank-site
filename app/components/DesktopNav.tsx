@@ -16,7 +16,7 @@ export function DesktopNav() {
       <div>
         <Link href="/" className="flex items-center gap-4">
           <Image
-            src="/full_logo_2x.png"
+            src="/brand/full_logo_2x.png"
             width={80}
             height={80}
             alt="tech tank full logo"

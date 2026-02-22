@@ -31,7 +31,7 @@
 }
 
 :root {
-  --background-image-gradient: url("../../public/gradient-vertical.png");
+  --background-image-gradient: url("../../public/brand/gradient-vertical.png");
 }
 
 body {
