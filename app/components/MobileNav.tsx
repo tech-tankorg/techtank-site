@@ -61,7 +61,7 @@ export function MobileNav() {
       </button>
       <Link href="/" className="flex items-center gap-4">
         <Image
-          src="/fish_logo.svg"
+          src="/brand/fish_logo.svg"
           width={64}
           height={64}
           alt="tech tank fish logo"

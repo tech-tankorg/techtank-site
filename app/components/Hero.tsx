@@ -34,7 +34,7 @@ export const Hero = () => {
           TechTank
         </h1>
         <Image
-          src="/full_logo.svg"
+          src="/brand/full_logo.svg"
           width={150}
           height={150}
           alt="tech tech fish logo"

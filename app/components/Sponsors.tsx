@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Intuit from "../../public/intuit.svg";
-import Kobo from "../../public/RakutenKobo.png";
-import Microsoft from "../../public/microsoft.svg";
-import Points from "../../public/points.png";
-import Prema from "../../public/PremaCoffee.png";
-import Vena from "../../public/Vena.svg";
+import Intuit from "../../public/sponsors/intuit.svg";
+import Kobo from "../../public/sponsors/RakutenKobo.png";
+import Microsoft from "../../public/sponsors/microsoft.svg";
+import Points from "../../public/sponsors/points.png";
+import Prema from "../../public/sponsors/PremaCoffee.png";
+import Vena from "../../public/sponsors/Vena.svg";
 
 export const Sponsors = () => {
 
