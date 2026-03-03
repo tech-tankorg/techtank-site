@@ -1,6 +1,6 @@
-import { SharedStyles as Styles } from "@/app/styles/shared-styles";
-import { twMerge } from "tailwind-merge";
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
+import { SharedStyles as Styles } from "@/app/styles/shared-styles";
 import AboutUsPhoto from "@/public/techtank-about-us.webp";
 
 export default function AboutPage() {

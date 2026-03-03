@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import "../styles/globals.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import { twMerge } from "tailwind-merge";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
+import "@/app/styles/global.css";
 
 export const metadata: Metadata = {
   title: "TechTank TO",

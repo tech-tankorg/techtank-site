@@ -1,6 +1,6 @@
-import { CoC_Contents } from "@/utils/constants/CoC_Constants";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+import { CoC_Contents } from "@/utils/constants/CoC_Constants";
 
 export default function CoC() {
   return (

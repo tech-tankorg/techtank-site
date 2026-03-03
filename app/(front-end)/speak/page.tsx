@@ -1,6 +1,6 @@
-import { EXTERNAL_LINKS } from "@/utils/constants/navigation";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
+import { EXTERNAL_LINKS } from "@/utils/constants/navigation";
 
 export default function SpeakPage() {
   return (
@@ -8,7 +8,7 @@ export default function SpeakPage() {
       <section
         className={twMerge(
           Styles.section,
-          "flex gap-16 flex-col lg:flex-row-reverse"
+          "flex gap-16 flex-col lg:flex-row-reverse",
         )}
       >
         <div>
@@ -72,7 +72,7 @@ export default function SpeakPage() {
       <section
         className={twMerge(
           Styles.section,
-          "flex flex-col lg:flex-row lg:gap-8"
+          "flex flex-col lg:flex-row lg:gap-8",
         )}
       >
         <div className="flex-1 xl:flex-2">
