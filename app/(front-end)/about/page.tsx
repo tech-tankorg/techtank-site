@@ -1,17 +1,12 @@
-import { SharedStyles as Styles } from "../styles/shared-styles";
+import { SharedStyles as Styles } from "@/app/styles/shared-styles";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
-import AboutUsPhoto from "../../public/techtank-about-us.webp";
+import AboutUsPhoto from "@/public/techtank-about-us.webp";
 
 export default function AboutPage() {
   return (
     <main>
-      <section
-        className={twMerge(
-          Styles.section,
-          "flex gap-16 flex-col"
-        )}
-      >
+      <section className={twMerge(Styles.section, "flex gap-16 flex-col")}>
         <Image
           alt="TechTank Photo Collage"
           src={AboutUsPhoto}
@@ -22,7 +17,7 @@ export default function AboutPage() {
         className={twMerge(
           Styles.section,
           "flex flex-col lg:flex-row lg:gap-8",
-          "bg-light-sand"
+          "bg-light-sand",
         )}
       >
         <div className="flex-1 xl:flex-2">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./styles/globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import "../styles/globals.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
