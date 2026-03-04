@@ -114,11 +114,40 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: rgba(221, 236, 238, 0.2);
+    background-color: var(--color-brand-primary-50);
     --scroll-padding-top: 0;
     scroll-padding-top: var(--scroll-padding-top);
-    /* @variant dark {
-      background-color: var(--color-primary-950);
-    } */
+    @variant dark {
+      background-color: var(--color-brand-primary-900);
+    }
+  }
+  header {
+    background-color: var(--color-brand-primary-50);
+    @variant dark {
+      background-color: var(--color-brand-primary-900);
+    }
+  }
+  footer {
+    background-color: var(--color-brand-primary-50);
+    @variant dark {
+      background-color: var(--color-brand-primary-900);
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-brand-primary-900);
+    @variant dark {
+      color: var(--color-brand-primary-50);
+    }
+  }
+  p {
+    color: var(--color-brand-primary-900);
+    @variant dark {
+      color: var(--color-brand-primary-50);
+    }
   }
 }
