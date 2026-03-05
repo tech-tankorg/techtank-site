@@ -24,14 +24,17 @@ export const Contact = () => {
       setEmailSent,
       setEmailErrored,
       setUserName,
-      setSubmittedUserName
+      setSubmittedUserName,
     );
   };
 
   return (
     <div
       id="contact-us" // Necessary for creating a link to the contact us section.
-      className={twMerge(Styles.wrapper, "min-h-[90vh] mx-auto my-6 sm:pt-32")}
+      className={twMerge(
+        "max-w-[1440px] w-11/12 m-auto",
+        "min-h-[90vh] mx-auto my-6 sm:pt-32",
+      )}
     >
       <h2 className="text-4xl text-center pb-6">Contact Us!</h2>
       <form
@@ -50,7 +53,7 @@ export const Contact = () => {
           id="user_name"
           value={userName}
           onChange={handleUserNameChange}
-          className="mt-1 p-2 mb-6 w-full border rounded-md border-gray-800"
+          className="mt-1 p-2 mb-6 w-full border rounded-md border-brand-primary-900 dark:border-brand-primary-50"
           required
         />
 
@@ -64,7 +67,7 @@ export const Contact = () => {
           type="email"
           name="reply_to"
           id="reply_to"
-          className="mt-1 p-2 mb-6 w-full border rounded-md border-gray-800"
+          className="mt-1 p-2 mb-6 w-full border rounded-md border-brand-primary-900 dark:border-brand-primary-50"
           required
         />
 
@@ -77,7 +80,7 @@ export const Contact = () => {
         <textarea
           name="message"
           id="message"
-          className="mt-1 p-3 mb-6 w-full border rounded-md border-gray-800 min-h-[180px]"
+          className="mt-1 p-3 mb-6 w-full border rounded-md border-brand-primary-900 dark:border-brand-primary-50 min-h-[180px]"
           required
         />
 
@@ -104,8 +107,4 @@ export const Contact = () => {
       )}
     </div>
   );
-};
-
-const Styles = {
-  wrapper: "max-w-[1440px] w-[90%] m-auto",
 };
