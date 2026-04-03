@@ -7,6 +7,7 @@ export const INTERNAL_LINKS = {
   DONATE: "/donate",
   CODE_OF_CONDUCT: "/code-of-conduct",
   TERMS_CONDITIONS: "/terms-conditions",
+  CALENDAR: "/calendar",
 } as const;
 
 export const EXTERNAL_LINKS = {
@@ -35,6 +36,7 @@ const navigation = {
       name: "Events",
       type: "dropdown",
       items: [
+        { name: "Calendar", href: INTERNAL_LINKS.CALENDAR },
         { name: "Videos", href: EXTERNAL_LINKS.YOUTUBE },
         { name: "Host Us", href: INTERNAL_LINKS.HOST },
         { name: "Be a Speaker", href: INTERNAL_LINKS.SPEAK },
