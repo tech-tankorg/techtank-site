@@ -11,7 +11,7 @@ cd techtank-site && npm install
 To start the local server:
 
 ```bash
-npm dev
+npm run dev
 ```
 
 To start the local server and run the Tailwind server simultaneously:
