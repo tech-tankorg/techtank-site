@@ -15,13 +15,19 @@ export default function CalendarPage() {
             our Luma calendar below.
           </p>
         </div>
+      </section>
+      <section
+        className={twMerge(
+          Styles.section,
+          "flex flex-col lg:flex-row lg:gap-8",
+          "bg-[#f7f8f9]"
+        )}
+      >
         <div className="flex justify-center w-full">
           <iframe
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
             className="w-full md:w-3/4 h-[600px] md:h-[900px]"
             style={{
-              border: "1px solid #bfcbda88",
-              borderRadius: "12px",
               display: "block",
               overflow: "hidden",
             }}
