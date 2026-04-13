@@ -20,7 +20,7 @@ export default function CalendarPage() {
         <div className="flex justify-center w-full">
           <iframe
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
-            className="w-full md:w-3/4 h-[600px] md:h-[900px]"
+            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px]"
             style={{
               display: "block",
               overflow: "hidden",
