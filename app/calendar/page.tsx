@@ -16,17 +16,11 @@ export default function CalendarPage() {
           </p>
         </div>
       </section>
-      <section
-        className={twMerge(
-          Styles.section,
-          "flex flex-col lg:flex-row lg:gap-8",
-          "bg-[#f7f8f9]"
-        )}
-      >
+      <section className="px-0 py-12 md:py-20 flex flex-col lg:flex-row lg:gap-8 bg-[#f7f8f9]">
         <div className="flex justify-center w-full">
           <iframe
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
-            className="w-full md:w-3/4 h-[600px] md:h-[900px]"
+            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px]"
             style={{
               display: "block",
               overflow: "hidden",
