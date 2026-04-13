@@ -103,8 +103,8 @@ export default function SpeakPage() {
 }
 
 const Styles = {
-  section: "px-16 py-12 pb-20",
-  sectionHeader: "text-6xl mb-12",
+  section: "px-4 xs:px-16 py-12 pb-20",
+  sectionHeader: "text-4xl xs:text-6xl mb-12 break-words",
   subHeader: "text-2xl/loose",
   logisticsItem: "mb-8",
   itemHeader: "text-xl/loose font-light",
