@@ -1,34 +1,5 @@
 @import "./theme.css";
 
-@font-face {
-  font-family: "Nunito";
-  src: url("/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 900; /* Variable range */
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Nunito-Italic";
-  src: url("/fonts/Nunito-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 900; /* Variable range */
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "PoetsenOne";
-  src: url("/fonts/PoetsenOne-Regular.ttf") format("truetype");
-  font-weight: 100; /* Variable range */
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "LostFish-5DOz";
-  src: url("/fonts/LostFish-5DOz.ttf") format("truetype");
-  font-weight: 100; /* Variable range */
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   --background-image-gradient: url("../../public/brand/gradient-vertical.png");
@@ -38,7 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: var(--background-image-gradient);
-  font-family: Nunito, Arial, Helvetica, sans-serif;
   @apply bg-cover;
   /* Disable scrolling on mobile when nav is open */
   @apply has-[nav[data-open=true]]:overflow-hidden sm:has-[nav[data-open=true]]:overflow-auto;
